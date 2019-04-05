@@ -1,21 +1,31 @@
+import org.junit.jupiter.api.Test;
+
 import java.util.Arrays;
+import org.junit.jupiter.api.Assertions;
 
 public class TestCases {
-    public static void main(String[] args){
-        int[] arr1 = {4,9,8,7};
-        Sorts.selectionSort(arr1, arr1.length);
-        System.out.println(Arrays.toString(arr1));
-
-        int[] arr2 = {1,1,1};
-        Sorts.selectionSort(arr2, arr2.length);
-        System.out.println(Arrays.toString(arr2));
-
-        int[] arr3 = {4,9,8,7};
-        Sorts.mergeSort(arr3, arr3.length);
-        System.out.println(Arrays.toString(arr3));
-
-        int[] arr4 = {1,1,1};
-        Sorts.mergeSort(arr4, arr4.length);
-        System.out.println(Arrays.toString(arr4));
+    @Test
+    public void TestSelectionSort1() {
+        int[] arr = {4, 9, 8, 7};
+        Sorts.selectionSort(arr, arr.length);
+        Assertions.assertArrayEquals(new int[]{4, 7, 8, 9}, arr);
+    }
+    @Test
+    public void TestSelectionSort2() {
+        int[] arr = {1, 1, 1};
+        Sorts.selectionSort(arr, arr.length);
+        Assertions.assertArrayEquals(new int[]{1, 1, 1}, arr);
+    }
+    @Test
+    public void TestMergeSort1() {
+        int[] arr = {4, 9, 8, 7};
+        Sorts.mergeSort(arr, arr.length);
+        Assertions.assertArrayEquals(new int[]{4, 7, 8, 9}, arr);
+    }
+    @Test
+    public void TestMergeSort2() {
+        int[] arr = {1,1,1};
+        Sorts.mergeSort(arr, arr.length);
+        Assertions.assertArrayEquals(new int[] {1,1,1}, arr);
     }
 }
