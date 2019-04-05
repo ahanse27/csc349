@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Sorts {
     public static void selectionSort(int[] arr, int N){
         for (int i = 0; i < N; i++){
