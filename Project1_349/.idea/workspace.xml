@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4307d22-e041-4f3a-9d4d-4aa99cf2b1b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1_349.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project1_349.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,8 +16,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sorts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+            <state relative-caret-position="-27">
               <folding>
                 <element signature="e#482#483#0" expanded="true" />
                 <element signature="e#521#522#0" expanded="true" />
@@ -31,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TestCases.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="303">
+              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,7 +88,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554489728518" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554489963009" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -118,6 +115,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestCases.TestMergeSort3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project1_349" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCases" />
+      <option name="METHOD_NAME" value="TestMergeSort3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestCases.testSomething" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project1_349" />
       <option name="PACKAGE_NAME" value="" />
@@ -131,6 +138,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestCases" />
+        <item itemvalue="JUnit.TestCases.TestMergeSort3" />
         <item itemvalue="JUnit.TestCases.testSomething" />
       </list>
     </recent_temporary>
@@ -157,6 +165,15 @@
     </history-entry>
     <history-entry file="TestCases_testSomething - 2019.04.05 at 11h 40m 29s.xml">
       <configuration name="TestCases.testSomething" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases - 2019.04.05 at 11h 42m 04s.xml">
+      <configuration name="TestCases" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_TestMergeSort3 - 2019.04.05 at 11h 44m 44s.xml">
+      <configuration name="TestCases.TestMergeSort3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases - 2019.04.05 at 11h 45m 19s.xml">
+      <configuration name="TestCases" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -204,8 +221,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Sorts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="-27">
           <folding>
             <element signature="e#482#483#0" expanded="true" />
             <element signature="e#521#522#0" expanded="true" />
@@ -215,8 +231,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TestCases.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state relative-caret-position="303">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
