@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Sorts {
     public static void selectionSort(int[] arr, int N){
         for (int i = 0; i < N; i++){
@@ -64,5 +66,84 @@ public class Sorts {
             k = k + 1;
         }
     }
+
+    public static void quickSort (int[] arr, int N){
+        if (arr.length > 1){
+            quickSort(arr, 0, N-1);
+        }
+        System.out.println((Arrays.toString(arr)));
+    }
+
+    private static void quickSort (int[] arr, int first, int last) {
+        if (first < last){
+            setPivotToEnd(arr,first,last);
+            int pivotIndex = splitList(arr,first,last);
+            quickSort(arr,first,pivotIndex-1);
+            quickSort(arr,pivotIndex+1,last);
+        }
+    }
+
+    private static void setPivotToEnd(int[] arr, int left, int right){
+        int center = (left + right)/2;
+        int temp;
+
+        if (arr[left] > arr[center]){
+            temp = arr[center];
+            arr[center] = arr[left];
+            arr[left] = temp;
+        }
+        if (arr[left] > arr[right]){
+            temp = arr[right];
+            arr[right] = arr[left];
+            arr[left] = temp;
+        }
+        if (arr[right] > arr[center]){
+            temp = arr[right];
+            arr[right] = arr[center];
+            arr[center] = temp;
+        }
+        //Chooses a pivot in arr[left..right] and place it at the end of the segment
+        //Precondition: none
+        //Postcondition: arr[right] is the pivot.s
+    }
+
+
+
+
+    private static int splitList (int[] arr, int left, int right){
+        //Rearranges the list by placing the pivot so that it is preceded by smaller
+        //values and followed by greater values. Returns pivot’s index.
+        //Precondition: arr[right] contains the pivot
+        //Postcondition: the pivot is properly placed and its index is returned.
+        // Elements in the list are arranged so that arr[i]<pivot for all arr[i]
+        // located to the left of pivot, and arr[i]>pivot for all arr[i] located to
+        // the right of the pivot.
+
+        int indexL = left;
+        int indexR = right-1;
+        int pivot = arr[right];
+        int temp;
+
+        while (indexL < indexR) {
+            while( arr[indexL] < pivot) {
+                indexL++;
+            }
+            while( indexR > indexL && arr[indexR] > pivot){
+                indexR--;
+            }
+            if (indexL < indexR) {
+                temp = arr[indexL];
+                arr[indexL] = arr[indexR];
+                arr[indexR] = temp;
+                indexL++;
+                indexR--;
+            }
+        }
+        temp = arr[indexL];
+        arr[indexL] = arr[right];
+        arr[right] = temp;
+        return indexL;
+    }
+
 
 }

@@ -32,10 +32,19 @@ public class TestCases {
         Sorts.mergeSort(arr, arr.length);
         Assertions.assertArrayEquals(new int[] {1,1,1}, arr);
     }
-    @Test
+    @org.junit.jupiter.api.Test
     public void TestMergeSort3() {
         int[] arr = {};
         Sorts.mergeSort(arr, arr.length);
         Assertions.assertArrayEquals(new int[] {}, arr);
     }
+
+    @org.junit.jupiter.api.Test
+    void testQuickSort1() {
+        int[] arr = {4, 9, 8, 7, 5};
+        Sorts.quickSort(arr, arr.length);
+        Assertions.assertArrayEquals(new int[]{4, 5, 7, 8, 9}, arr);
+    }
+
+
 }

@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4307d22-e041-4f3a-9d4d-4aa99cf2b1b5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Lab0_249/Lab0/Algorithms.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab0_249/Lab0/Algorithms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab0_249/Lab0/RunTimes.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab0_249/Lab0/RunTimes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab0_249/Lab0/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab0_249/Lab0/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project1_349.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project1_349.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sorts.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,25 +19,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Sorts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="334">
+              <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TestCases.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="389">
+              <caret line="44" column="22" lean-forward="true" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,15 +61,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Sorts.java" />
         <option value="$PROJECT_DIR$/src/TestCases.java" />
+        <option value="$PROJECT_DIR$/src/Sorts.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="745" />
+    <option name="width" value="1386" />
+    <option name="height" value="814" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -69,6 +78,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -76,23 +86,39 @@
               <item name="Project1_349" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project1_349" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Project1_349" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project1_349" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554490112603" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -106,11 +132,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestCases">
+  <component name="RunManager" selected="JUnit.TestCases.testQuickSort1">
     <configuration name="TestCases" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project1_349" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestCases" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,11 +152,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCases.testSomething" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCases.TestSelectionSort1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project1_349" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestCases" />
-      <option name="METHOD_NAME" value="testSomething" />
+      <option name="METHOD_NAME" value="TestSelectionSort1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCases.TestSelectionSort2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project1_349" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCases" />
+      <option name="METHOD_NAME" value="TestSelectionSort2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCases.testQuickSort1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project1_349" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCases" />
+      <option name="METHOD_NAME" value="testQuickSort1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,9 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestCases.testQuickSort1" />
         <item itemvalue="JUnit.TestCases" />
+        <item itemvalue="JUnit.TestCases.TestSelectionSort2" />
+        <item itemvalue="JUnit.TestCases.TestSelectionSort1" />
         <item itemvalue="JUnit.TestCases.TestMergeSort3" />
-        <item itemvalue="JUnit.TestCases.testSomething" />
       </list>
     </recent_temporary>
   </component>
@@ -157,23 +206,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCases_testSomething - 2019.04.05 at 11h 37m 21s.xml">
-      <configuration name="TestCases.testSomething" configurationId="JUnit" />
+    <history-entry file="TestCases_testQuickSort1 - 2019.04.05 at 12h 48m 31s.xml">
+      <configuration name="TestCases.testQuickSort1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCases_testSomething - 2019.04.05 at 11h 39m 51s.xml">
-      <configuration name="TestCases.testSomething" configurationId="JUnit" />
+    <history-entry file="TestCases_testQuickSort1 - 2019.04.05 at 12h 55m 10s.xml">
+      <configuration name="TestCases.testQuickSort1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCases_testSomething - 2019.04.05 at 11h 40m 29s.xml">
-      <configuration name="TestCases.testSomething" configurationId="JUnit" />
+    <history-entry file="TestCases_testQuickSort1 - 2019.04.05 at 12h 57m 57s.xml">
+      <configuration name="TestCases.testQuickSort1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCases - 2019.04.05 at 11h 42m 04s.xml">
-      <configuration name="TestCases" configurationId="JUnit" />
+    <history-entry file="TestCases_testQuickSort1 - 2019.04.05 at 13h 01m 11s.xml">
+      <configuration name="TestCases.testQuickSort1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCases_TestMergeSort3 - 2019.04.05 at 11h 44m 44s.xml">
-      <configuration name="TestCases.TestMergeSort3" configurationId="JUnit" />
+    <history-entry file="TestCases_testQuickSort1 - 2019.04.05 at 13h 02m 43s.xml">
+      <configuration name="TestCases.testQuickSort1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCases - 2019.04.05 at 11h 45m 19s.xml">
-      <configuration name="TestCases" configurationId="JUnit" />
+    <history-entry file="TestCases_testQuickSort1 - 2019.04.05 at 13h 03m 15s.xml">
+      <configuration name="TestCases.testQuickSort1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_testQuickSort1 - 2019.04.05 at 13h 05m 20s.xml">
+      <configuration name="TestCases.testQuickSort1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_testQuickSort1 - 2019.04.05 at 13h 05m 56s.xml">
+      <configuration name="TestCases.testQuickSort1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_testQuickSort1 - 2019.04.05 at 13h 08m 05s.xml">
+      <configuration name="TestCases.testQuickSort1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_testQuickSort1 - 2019.04.05 at 13h 14m 09s.xml">
+      <configuration name="TestCases.testQuickSort1" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -186,9 +247,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="745" extended-state="0" />
+    <frame x="0" y="0" width="764" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23363096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -196,17 +258,17 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Learn" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32924962" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32924962" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28554216" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32924962" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.35375193" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.566482" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32924962" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -218,23 +280,20 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Sorts.java">
+    <entry file="file://$PROJECT_DIR$/src/TestCases.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="389">
+          <caret line="44" column="22" lean-forward="true" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
           <folding>
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestCases.java">
+    <entry file="file://$PROJECT_DIR$/src/Sorts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="334">
+          <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -295,7 +354,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
