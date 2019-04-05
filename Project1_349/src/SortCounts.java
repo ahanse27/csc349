@@ -12,10 +12,10 @@ public class SortCounts {
 
 
         for (N = 100; N <= 12800; N=N*2){
-            for (int t = 0; t < 100; t++){
+            for (int t = 0; t < 100; t++) {
 
-                for (int i = 0; i < N; i++){
-                    int n = (int)(Math.random()*N);
+                for (int i = 0; i < N; i++) {
+                    int n = (int) (Math.random() * N);
                     arr1[i] = n;
                     arr2[i] = n;
                     arr3[i] = n;
@@ -23,15 +23,16 @@ public class SortCounts {
 
                 comparisons1 += Sorts.selectionSort(arr1, N);
 
-                comparisons2 +=Sorts.mergeSort(arr2, N);
+                comparisons2 += Sorts.mergeSort(arr2, N);
 
                 comparisons3 += Sorts.quickSort(arr2, N);
 
 
-
-
             }
             System.out.println("N=" + N+": C_ss="+ (comparisons1/100) +", C_ms="+ (comparisons2/100)+", C_qs="+ (comparisons3/100) );
+            comparisons1 = 0;
+            comparisons2 = 0;
+            comparisons3 = 0;
         }
 
     }
