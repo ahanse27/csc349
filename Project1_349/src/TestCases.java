@@ -5,7 +5,8 @@ public class TestCases {
     @Test
     public void TestSelectionSort1() {
         int[] arr = {4, 9, 8, 7, 4};
-        Sorts.selectionSort(arr, arr.length);
+        long val = Sorts.selectionSort(arr, arr.length);
+        System.out.println(val);
         Assertions.assertArrayEquals(new int[]{4, 4, 7, 8, 9}, arr);
     }
     @Test
@@ -23,7 +24,8 @@ public class TestCases {
     @Test
     public void TestMergeSort1() {
         int[] arr = {4, 9, 8, 7, 4};
-        Sorts.mergeSort(arr, arr.length);
+        long vals = Sorts.mergeSort(arr, arr.length);
+        System.out.println(vals);
         Assertions.assertArrayEquals(new int[]{4, 4, 7, 8, 9}, arr);
     }
     @Test
@@ -42,7 +44,8 @@ public class TestCases {
     @org.junit.jupiter.api.Test
     void testQuickSort1() {
         int[] arr = {4, 9, 8, 7, 5};
-        Sorts.quickSort(arr, arr.length);
+        long vals = Sorts.quickSort(arr, arr.length);
+        System.out.println(vals);
         Assertions.assertArrayEquals(new int[]{4, 5, 7, 8, 9}, arr);
     }
 
