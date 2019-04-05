@@ -1,4 +1,4 @@
-import java.util.Arrays;
+//Mani Movva (mmovva@calpoly.edu) and Anish Yakkala (ayakkala@calpoly.edu) Date: 04/05/19 Assignment: Project 1 
 
 public class Sorts1 {
     public static long selectionSort(int[] arr, int N){

@@ -1,0 +1,10 @@
+//Mani Movva (mmovva@calpoly.edu) and Anish Yakkala (ayakkala@calpoly.edu) Date: 04/05/19 Assignment: Project 1 
+
+N=100: C_ss=5050, C_ms=541, C_qs=585
+N=200: C_ss=20100, C_ms=1280, C_qs=1371
+N=400: C_ss=80200, C_ms=2961, C_qs=3136
+N=800: C_ss=320400, C_ms=6722, C_qs=7061
+N=1600: C_ss=1280800, C_ms=15041, C_qs=15745
+N=3200: C_ss=5121600, C_ms=33275, C_qs=34700
+N=6400: C_ss=20483200, C_ms=72947, C_qs=75873
+N=12800: C_ss=81926400, C_ms=158699, C_qs=164702
