@@ -21,11 +21,11 @@ public class SortCounts {
                     arr3[i] = n;
                 }
 
-                comparisons1 += Sorts.selectionSort(arr1, N);
+                comparisons1 += Sorts1.selectionSort(arr1, N);
 
-                comparisons2 += Sorts.mergeSort(arr2, N);
+                comparisons2 += Sorts1.mergeSort(arr2, N);
 
-                comparisons3 += Sorts.quickSort(arr2, N);
+                comparisons3 += Sorts1.quickSort(arr2, N);
 
 
             }
