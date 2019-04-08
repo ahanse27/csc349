@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import java.util.Arrays;
 
 public class TestCases {
     @Test
@@ -49,5 +50,103 @@ public class TestCases {
         Assertions.assertArrayEquals(new int[]{4, 5, 7, 8, 9}, arr);
     }
 
+    @org.junit.jupiter.api.Test
+    void testSelectionSortRand() {
+        int N = 30;
+        int[] arr1 = new int[N];
+        int[] arr2 = new int[N];
+
+        for (int t = 0; t < 100; t++){
+            System.out.print(t);
+            System.out.println();
+            for (int i = 0; i < N; i++){
+                int n = (int)(Math.random()*N);
+                arr1[i] = n;
+                arr2[i] = n;
+            }
+            Sorts.selectionSort(arr1, arr1.length);
+
+            Arrays.sort(arr2);
+            for( int i = 0; i < arr2.length; i++){
+                if(arr1[i] != arr2[i]) {
+                    System.out.print("!");
+                }
+                System.out.print(arr1[i]);
+            }
+            System.out.println();
+            for( int i = 0; i < arr2.length; i++){
+
+                System.out.print(arr2[i]);
+            }
+            Assertions.assertArrayEquals(arr2, arr1);
+        }
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void testMergeSortRand() {
+        int N = 30;
+        int[] arr1 = new int[N];
+        int[] arr2 = new int[N];
+
+        for (int t = 0; t < 100; t++){
+            System.out.print(t);
+            System.out.println();
+            for (int i = 0; i < N; i++){
+                int n = (int)(Math.random()*N);
+                arr1[i] = n;
+                arr2[i] = n;
+            }
+            Sorts.mergeSort(arr1, arr1.length);
+
+            Arrays.sort(arr2);
+            for( int i = 0; i < arr2.length; i++){
+                if(arr1[i] != arr2[i]) {
+                    System.out.print("!");
+                }
+                System.out.print(arr1[i]);
+            }
+            System.out.println();
+            for( int i = 0; i < arr2.length; i++){
+
+                System.out.print(arr2[i]);
+            }
+            Assertions.assertArrayEquals(arr2, arr1);
+        }
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void testQuickSortRand() {
+        int N = 30;
+        int[] arr1 = new int[N];
+        int[] arr2 = new int[N];
+
+        for (int t = 0; t < 100; t++){
+            System.out.print(t);
+            System.out.println();
+            for (int i = 0; i < N; i++){
+                int n = (int)(Math.random()*N);
+                arr1[i] = n;
+                arr2[i] = n;
+            }
+            Sorts.quickSort(arr1, arr1.length);
+
+            Arrays.sort(arr2);
+            for( int i = 0; i < arr2.length; i++){
+                if(arr1[i] != arr2[i]) {
+                    System.out.print("!");
+                }
+                System.out.print(arr1[i]);
+            }
+            System.out.println();
+            for( int i = 0; i < arr2.length; i++){
+
+                System.out.print(arr2[i]);
+            }
+            Assertions.assertArrayEquals(arr2, arr1);
+        }
+
+    }
 
 }
