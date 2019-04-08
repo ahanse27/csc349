@@ -130,30 +130,14 @@ public class TestCases {
         int[] arr2 = new int[N];
 
         for (int t = 0; t < 100; t++){
-            System.out.print(t);
-            System.out.println();
             for (int i = 0; i < N; i++){
                 int n = (int)(Math.random()*N);
                 arr1[i] = n;
                 arr2[i] = n;
             }
-            System.out.println(Arrays.toString(arr1));
             Sorts.quickSort(arr1, arr1.length);
-            System.out.println();
             Arrays.sort(arr2);
-            //for( int i = 0; i < arr2.length; i++){
-            //    if(arr1[i] != arr2[i]) {
-            //        System.out.print("!");
-            //    }
-            //    System.out.print(arr1[i]);
-            //}
-            System.out.println(Arrays.toString(arr1));
-            System.out.println();
-            System.out.println(Arrays.toString(arr2));
-            //for( int i = 0; i < arr2.length; i++){
-//
-  //              System.out.print(arr2[i]);
-    //        }
+
             Assertions.assertArrayEquals(arr2, arr1);
         }
 

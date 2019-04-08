@@ -1,38 +1,36 @@
-//Mani Movva (mmovva@calpoly.edu) and Anish Yakkala (ayakkala@calpoly.edu) Date: 04/05/19 Assignment: Project 1 
+N=5000: T_ss=26, T_ms=2, T_qs=1
+N=5000: T_ss=20, T_ms=0, T_qs=0
+N=5000: T_ss=10, T_ms=0, T_qs=0
+N=5000: T_ss=21, T_ms=0, T_qs=0
+N=5000: T_ss=20, T_ms=1, T_qs=0
 
-N=5000: T_ss=33, T_ms=2, T_qs=1
-N=5000: T_ss=28, T_ms=0, T_qs=0
-N=5000: T_ss=7, T_ms=0, T_qs=0
-N=5000: T_ss=29, T_ms=0, T_qs=0
-N=5000: T_ss=28, T_ms=0, T_qs=0
+N=10000: T_ss=89, T_ms=1, T_qs=0
+N=10000: T_ss=89, T_ms=1, T_qs=0
+N=10000: T_ss=86, T_ms=1, T_qs=0
+N=10000: T_ss=85, T_ms=1, T_qs=0
+N=10000: T_ss=42, T_ms=1, T_qs=0
 
-N=10000: T_ss=117, T_ms=1, T_qs=0
-N=10000: T_ss=115, T_ms=1, T_qs=0
-N=10000: T_ss=115, T_ms=2, T_qs=0
-N=10000: T_ss=114, T_ms=1, T_qs=0
-N=10000: T_ss=31, T_ms=1, T_qs=0
+N=20000: T_ss=166, T_ms=3, T_qs=1
+N=20000: T_ss=167, T_ms=3, T_qs=1
+N=20000: T_ss=170, T_ms=3, T_qs=1
+N=20000: T_ss=166, T_ms=3, T_qs=1
+N=20000: T_ss=174, T_ms=4, T_qs=1
 
-N=20000: T_ss=131, T_ms=3, T_qs=0
-N=20000: T_ss=132, T_ms=3, T_qs=0
-N=20000: T_ss=127, T_ms=3, T_qs=0
-N=20000: T_ss=132, T_ms=3, T_qs=0
-N=20000: T_ss=130, T_ms=3, T_qs=0
+N=40000: T_ss=698, T_ms=6, T_qs=3
+N=40000: T_ss=709, T_ms=8, T_qs=4
+N=40000: T_ss=679, T_ms=9, T_qs=4
+N=40000: T_ss=703, T_ms=13, T_qs=3
+N=40000: T_ss=694, T_ms=5, T_qs=3
 
-N=40000: T_ss=509, T_ms=6, T_qs=0
-N=40000: T_ss=511, T_ms=6, T_qs=0
-N=40000: T_ss=514, T_ms=6, T_qs=0
-N=40000: T_ss=508, T_ms=12, T_qs=0
-N=40000: T_ss=510, T_ms=4, T_qs=0
+N=80000: T_ss=2909, T_ms=9, T_qs=7
+N=80000: T_ss=2844, T_ms=10, T_qs=7
+N=80000: T_ss=2824, T_ms=15, T_qs=7
+N=80000: T_ss=2764, T_ms=16, T_qs=7
+N=80000: T_ss=2705, T_ms=19, T_qs=9
 
-N=80000: T_ss=2034, T_ms=11, T_qs=1
-N=80000: T_ss=2037, T_ms=10, T_qs=1
-N=80000: T_ss=2044, T_ms=10, T_qs=1
-N=80000: T_ss=2036, T_ms=14, T_qs=1
-N=80000: T_ss=2041, T_ms=14, T_qs=1
-
-N=160000: T_ss=8159, T_ms=31, T_qs=3
-N=160000: T_ss=8133, T_ms=29, T_qs=3
-N=160000: T_ss=8152, T_ms=31, T_qs=3
-N=160000: T_ss=8134, T_ms=25, T_qs=3
-N=160000: T_ss=8401, T_ms=29, T_qs=3
+N=160000: T_ss=11177, T_ms=31, T_qs=15
+N=160000: T_ss=10899, T_ms=28, T_qs=14
+N=160000: T_ss=10624, T_ms=31, T_qs=15
+N=160000: T_ss=11643, T_ms=29, T_qs=16
+N=160000: T_ss=11814, T_ms=20, T_qs=15
 
