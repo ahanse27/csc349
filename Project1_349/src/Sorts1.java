@@ -7,7 +7,7 @@ public class Sorts1 {
             int minIndex = i;
             for (int j = i; j < N; j++){
                 comparisons ++;
-                if (arr[i] > arr[j]){
+                if (arr[minIndex] > arr[j]){
                     minIndex = j;
                 }
             }
@@ -138,9 +138,16 @@ public class Sorts1 {
                 comparisons[0] = comparisons[0] + 1;
                 indexL++;
             }
-            while( indexR > indexL && arr[indexR] > pivot){
-                comparisons[0] = comparisons[0] + 1;
-                indexR--;
+            comparisons[0] = comparisons[0] + 1;
+            while(indexR >= indexL){
+                if(arr[indexR] > pivot){
+                    comparisons[0] = comparisons[0] + 1;
+                    indexR--;
+                }
+                else{
+                    comparisons[0] = comparisons[0] + 1;
+                    break;
+                }
             }
             if (indexL < indexR) {
                 temp = arr[indexL];
