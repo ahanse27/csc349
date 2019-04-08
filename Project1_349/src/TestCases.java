@@ -17,9 +17,9 @@ public class TestCases {
     }
     @Test
     public void TestSelectionSort3() {
-        int[] arr = {};
+        int[] arr = {10,9,8,7};
         Sorts.selectionSort(arr, arr.length);
-        Assertions.assertArrayEquals(new int[] {}, arr);
+        Assertions.assertArrayEquals(new int[] {7,8,9,10}, arr);
     }
     @Test
     public void TestMergeSort1() {
@@ -47,6 +47,13 @@ public class TestCases {
         long vals = Sorts1.quickSort(arr, arr.length);
         System.out.println(vals);
         Assertions.assertArrayEquals(new int[]{4, 5, 7, 8, 9}, arr);
+    }
+    @org.junit.jupiter.api.Test
+    void testQuickSort2() {
+        int[] arr = {6, 7, 8, 9, 10};
+        long vals = Sorts1.quickSort(arr, arr.length);
+        System.out.println(vals);
+        Assertions.assertArrayEquals(new int[]{6, 7, 8, 9, 10}, arr);
     }
 
 
