@@ -27,7 +27,7 @@ public class SortCounts {
 
                 comparisons2 += Sorts1.mergeSort(arr2, N);
 
-                comparisons3 += Sorts1.quickSort(arr2, N);
+                comparisons3 += Sorts1.quickSort(arr3, N);
 
 
             }

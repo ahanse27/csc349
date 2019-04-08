@@ -1,5 +1,5 @@
 //Mani Movva (mmovva@calpoly.edu) and Anish Yakkala (ayakkala@calpoly.edu) Date: 04/05/19 Assignment: Project 1 
-
+import java.util.Arrays;
 public class SortTimes {
 
     public static void main(String [] args){
@@ -17,7 +17,6 @@ public class SortTimes {
                     arr2[i] = n;
                     arr3[i] = n;
                 }
-
                 long startTime = System.nanoTime();
                 Sorts.selectionSort(arr1, N);
                 long endTime = System.nanoTime();
@@ -29,7 +28,7 @@ public class SortTimes {
                 long time2 = (endTime-startTime)/(1000000);
 
                 startTime = System.nanoTime();
-                Sorts.quickSort(arr2, N);
+                Sorts.quickSort(arr3, N);
                 endTime = System.nanoTime();
                 long time3 = (endTime-startTime)/(1000000);
 

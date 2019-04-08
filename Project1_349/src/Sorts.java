@@ -69,9 +69,7 @@ public class Sorts {
     }
 
     public static void quickSort (int[] arr, int N){
-        if (arr.length > 1){
-            quickSort(arr, 0, N-1);
-        }
+        quickSort(arr, 0, N-1);
     }
 
     private static void quickSort (int[] arr, int first, int last) {
@@ -124,14 +122,14 @@ public class Sorts {
         int pivot = arr[right];
         int temp;
 
-        while (indexL < indexR) {
-            while( arr[indexL] < pivot) {
+        while (indexL <= indexR) {
+            while(arr[indexL] < pivot) {
                 indexL++;
             }
-            while( indexR > indexL && arr[indexR] > pivot){
+            while(indexL <= indexR && arr[indexR] > pivot){
                 indexR--;
             }
-            if (indexL < indexR) {
+            if (indexL <= indexR) {
                 temp = arr[indexL];
                 arr[indexL] = arr[indexR];
                 arr[indexR] = temp;
