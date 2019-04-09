@@ -1,5 +1,5 @@
 //Mani Movva (mmovva@calpoly.edu) and Anish Yakkala (ayakkala@calpoly.edu) Date: 04/05/19 Assignment: Project 1 
-import java.util.Arrays;
+
 public class SortTimes {
 
     public static void main(String [] args){
