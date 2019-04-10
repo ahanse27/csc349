@@ -126,9 +126,18 @@ public class Sorts {
             while(arr[indexL] < pivot) {
                 indexL++;
             }
-            while(indexL <= indexR && arr[indexR] > pivot){
-                indexR--;
+
+
+            while ((indexL <= indexR)){
+                if (arr[indexR] > pivot) {
+                    indexR--;
+
+                } else {
+
+                    break;
+                }
             }
+
             if (indexL <= indexR) {
                 temp = arr[indexL];
                 arr[indexL] = arr[indexR];
@@ -142,6 +151,7 @@ public class Sorts {
         arr[right] = temp;
         return indexL;
     }
+
 
 
 }
