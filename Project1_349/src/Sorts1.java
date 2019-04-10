@@ -140,11 +140,19 @@ public class Sorts1 {
             }
             comparisons[0] = comparisons[0] + 1;
 
-            while(indexL <= indexR && arr[indexR] > pivot){
-                comparisons[0] = comparisons[0] + 1;
-                indexR--;
+
+            while ((indexL <= indexR)){
+                if (arr[indexR] > pivot) {
+                    indexR--;
+                    comparisons[0] = comparisons[0] + 1;
+
+                } else {
+                    comparisons[0] = comparisons[0] + 1;
+
+                    break;
+                }
             }
-            comparisons[0] = comparisons[0] + 1;
+
             if (indexL <= indexR) {
                 temp = arr[indexL];
                 arr[indexL] = arr[indexR];
