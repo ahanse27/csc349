@@ -5,7 +5,7 @@ public class Sorts1 {
         int comparisons = 0;
         for (int i = 0; i < N; i++){
             int minIndex = i;
-            for (int j = i; j < N; j++){
+            for (int j = i + 1; j < N; j++){
                 comparisons ++;
                 if (arr[minIndex] > arr[j]){
                     minIndex = j;
