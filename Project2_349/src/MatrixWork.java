@@ -1,7 +1,6 @@
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.File;
-import java.util.Arrays;
 
 public class MatrixWork{
     public static void main(String[] args)throws FileNotFoundException{
