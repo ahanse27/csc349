@@ -62,6 +62,12 @@ public class TestCases {
         Sorts.quickSort(arr, arr.length);
         Assertions.assertArrayEquals(new int[] {}, arr);
     }
+    @org.junit.jupiter.api.Test
+    public void TestQuickSort4() {
+        int[] arr = {1,1,1,1,1,1,1,1};
+        Sorts.quickSort(arr, arr.length);
+        Assertions.assertArrayEquals(new int[] {1,1,1,1,1,1,1,1}, arr);
+    }
 
     @org.junit.jupiter.api.Test
     void testSelectionSortRand() {
@@ -141,7 +147,7 @@ public class TestCases {
                 arr1[i] = n;
                 arr2[i] = n;
             }
-            Sorts.quickSort(arr1, arr1.length);
+            Sorts1.quickSort(arr1, arr1.length);
             Arrays.sort(arr2);
 
             Assertions.assertArrayEquals(arr2, arr1);

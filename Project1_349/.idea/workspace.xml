@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b4307d22-e041-4f3a-9d4d-4aa99cf2b1b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project1_349/SortTimes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project1_349/SortTimes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project1_349/Sorts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project1_349/Sorts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project1_349/Sorts1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project1_349/Sorts1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project1_349/TestCases.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project1_349/TestCases.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorts.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project1_349/counts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project1_349/counts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project1_349/times.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project1_349/times.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sorts1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorts1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorts1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorts1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCases.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,20 +23,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sorts1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="145" column="13" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
+            <state relative-caret-position="195">
+              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Sorts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="130" column="13" lean-forward="true" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
+            <state relative-caret-position="257">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding>
                 <element signature="e#2039#2040#0" expanded="true" />
                 <element signature="e#2081#2082#0" expanded="true" />
@@ -50,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/src/SortCounts.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -59,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/src/SortTimes.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="596">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -72,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TestCases.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-597">
-              <caret line="78" column="13" lean-forward="true" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+            <state relative-caret-position="2070">
+              <caret line="138" column="30" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,8 +98,8 @@
         <option value="$PROJECT_DIR$/src/SortCounts.java" />
         <option value="$PROJECT_DIR$/src/SortTimes.java" />
         <option value="$PROJECT_DIR$/src/Sorts1.java" />
-        <option value="$PROJECT_DIR$/src/TestCases.java" />
         <option value="$PROJECT_DIR$/src/Sorts.java" />
+        <option value="$PROJECT_DIR$/src/TestCases.java" />
       </list>
     </option>
   </component>
@@ -111,7 +110,6 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="745" />
@@ -152,7 +150,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554869586243" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555342617814" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -181,32 +179,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestCases.testQuickSortRand">
-    <configuration name="TestCases.TestMergeSort3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestCases">
+    <configuration name="TestCases" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project1_349" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestCases" />
-      <option name="METHOD_NAME" value="TestMergeSort3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCases.TestMergeSort2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project1_349" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCases" />
+      <option name="METHOD_NAME" value="TestMergeSort2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCases.TestQuickSort3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCases.TestQuickSort4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project1_349" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestCases" />
-      <option name="METHOD_NAME" value="TestQuickSort3" />
+      <option name="METHOD_NAME" value="TestQuickSort4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCases.testMergeSortRand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCases.testQuickSort1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project1_349" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestCases" />
-      <option name="METHOD_NAME" value="testMergeSortRand" />
+      <option name="METHOD_NAME" value="testQuickSort1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -222,23 +228,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCases.testSelectionSortRand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project1_349" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestCases" />
-      <option name="METHOD_NAME" value="testSelectionSortRand" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestCases" />
+        <item itemvalue="JUnit.TestCases.TestMergeSort2" />
+        <item itemvalue="JUnit.TestCases.TestQuickSort4" />
         <item itemvalue="JUnit.TestCases.testQuickSortRand" />
-        <item itemvalue="JUnit.TestCases.testSelectionSortRand" />
-        <item itemvalue="JUnit.TestCases.testMergeSortRand" />
-        <item itemvalue="JUnit.TestCases.TestQuickSort3" />
-        <item itemvalue="JUnit.TestCases.TestMergeSort3" />
+        <item itemvalue="JUnit.TestCases.testQuickSort1" />
       </list>
     </recent_temporary>
   </component>
@@ -256,35 +252,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCases_testMergeSortRand - 2019.04.09 at 21h 05m 33s.xml">
-      <configuration name="TestCases.testMergeSortRand" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCases_testSelectionSortRand - 2019.04.09 at 21h 05m 40s.xml">
-      <configuration name="TestCases.testSelectionSortRand" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCases_TestSelectionSort3 - 2019.04.09 at 21h 06m 16s.xml">
-      <configuration name="TestCases.TestSelectionSort3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCases_TestMergeSort3 - 2019.04.09 at 21h 06m 27s.xml">
-      <configuration name="TestCases.TestMergeSort3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCases_TestQuickSort3 - 2019.04.09 at 21h 07m 04s.xml">
-      <configuration name="TestCases.TestQuickSort3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCases_testQuickSortRand - 2019.04.09 at 21h 07m 50s.xml">
-      <configuration name="TestCases.testQuickSortRand" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCases_testMergeSortRand - 2019.04.09 at 21h 08m 04s.xml">
-      <configuration name="TestCases.testMergeSortRand" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCases_testSelectionSortRand - 2019.04.09 at 21h 08m 22s.xml">
-      <configuration name="TestCases.testSelectionSortRand" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCases_testQuickSortRand - 2019.04.09 at 21h 09m 40s.xml">
-      <configuration name="TestCases.testQuickSortRand" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestCases_testQuickSortRand - 2019.04.09 at 21h 10m 03s.xml">
       <configuration name="TestCases.testQuickSortRand" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_testQuickSort1 - 2019.04.09 at 21h 38m 04s.xml">
+      <configuration name="TestCases.testQuickSort1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_testQuickSortRand - 2019.04.10 at 08h 09m 51s.xml">
+      <configuration name="TestCases.testQuickSortRand" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_TestQuickSort4 - 2019.04.12 at 08h 12m 11s.xml">
+      <configuration name="TestCases.TestQuickSort4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_TestQuickSort4 - 2019.04.12 at 08h 12m 28s.xml">
+      <configuration name="TestCases.TestQuickSort4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_TestQuickSort4 - 2019.04.12 at 08h 12m 44s.xml">
+      <configuration name="TestCases.TestQuickSort4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_TestQuickSort4 - 2019.04.12 at 08h 12m 51s.xml">
+      <configuration name="TestCases.TestQuickSort4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_TestQuickSort4 - 2019.04.12 at 08h 13m 02s.xml">
+      <configuration name="TestCases.TestQuickSort4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_TestMergeSort2 - 2019.04.12 at 08h 13m 18s.xml">
+      <configuration name="TestCases.TestMergeSort2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases - 2019.04.12 at 08h 13m 26s.xml">
+      <configuration name="TestCases" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -297,8 +293,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="745" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="743" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -310,7 +305,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27105665" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2718894" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -356,21 +351,28 @@
     <entry file="file://$PROJECT_DIR$/src/SortTimes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="596">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SortCounts.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sorts1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TestCases.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-597">
-          <caret line="78" column="13" lean-forward="true" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+        <state relative-caret-position="2070">
+          <caret line="138" column="30" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -379,19 +381,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sorts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="130" column="13" lean-forward="true" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
+        <state relative-caret-position="257">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding>
             <element signature="e#2039#2040#0" expanded="true" />
             <element signature="e#2081#2082#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sorts1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="145" column="13" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
         </state>
       </provider>
     </entry>
