@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.io.File;
 
 public class MatrixWork{
-    public static int[][]matrixProduct(int[][]A, int[][]B) throws IllegalArgumentException, FileNotFoundException {
+    public static void main(String[] args)throws FileNotFoundException{
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the file name");
         String filename = in.nextLine();
@@ -16,4 +16,7 @@ public class MatrixWork{
             }
         }
     }
+    public static int[][]matrixProduct(int[][]A, int[][]B) throws IllegalArgumentException, FileNotFoundException {
+    }
+    
 }
