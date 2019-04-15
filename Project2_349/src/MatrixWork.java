@@ -12,7 +12,7 @@ public class MatrixWork{
         int counter = 0;
         while (sc.hasNextLine()){
             if (counter == 0){
-
+                System.out.println(sc.nextLine());
             }
         }
     }
@@ -20,6 +20,8 @@ public class MatrixWork{
        if (B.length != A[0].length){ //check that mat sizes are valid
             throw new IllegalArgumentException();
         }
+       int[][] multi = new int[5][];
+       return multi;
     }
 
 }
