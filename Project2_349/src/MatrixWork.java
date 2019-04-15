@@ -18,5 +18,5 @@ public class MatrixWork{
     }
     public static int[][]matrixProduct(int[][]A, int[][]B) throws IllegalArgumentException, FileNotFoundException {
     }
-    
+
 }
