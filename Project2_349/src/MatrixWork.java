@@ -16,7 +16,10 @@ public class MatrixWork{
             }
         }
     }
-    public static int[][]matrixProduct(int[][]A, int[][]B) throws IllegalArgumentException, FileNotFoundException {
+    public static int[][]matrixProduct(int[][]A, int[][]B) throws IllegalArgumentException {
+       if (B.length != A[0].length){ //check that mat sizes are valid
+            throw new IllegalArgumentException();
+        }
     }
     
 }
