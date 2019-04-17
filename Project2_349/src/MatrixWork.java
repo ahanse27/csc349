@@ -6,12 +6,18 @@ public class MatrixWork{
     public static void main(String[] args)throws FileNotFoundException{
         int[] matSpec = readFile();
         int[][][] matrices = makeMat(matSpec);
-        int[][] C = matrixProduct(matrices[0],matrices[1]);
-        for (int[] row: C){
-            for (int val : row){
-                System.out.print(val + " ");
+        try {
+            int[][] C = matrixProduct(matrices[0], matrices[1]);
+            for (int[] row: C){
+                for (int val : row){
+                    System.out.print(val + " ");
+                }
+                System.out.println();
             }
-            System.out.println();
+        }
+        catch(IllegalArgumentException e){
+            System.out.println("Matrices are incompatible");
+            return;
         }
     }
     public static int[][]matrixProduct(int[][]A, int[][]B) throws IllegalArgumentException {
