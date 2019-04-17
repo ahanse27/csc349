@@ -16,7 +16,7 @@ public class MatrixWork{
     }
     public static int[][]matrixProduct(int[][]A, int[][]B) throws IllegalArgumentException {
        if (B.length != A[0].length){ //check that mat sizes are valid
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Matrices are incompatible");
         }
        int[][] multi = new int[A.length][B[0].length];
        int i = 0;
