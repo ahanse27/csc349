@@ -132,7 +132,7 @@ public class MatrixProduct {
             if (colA != rowB || colA != rowA || colB != rowB || ((n & (n-1)) != 0)) {
                 throw new IllegalArgumentException();
             }
-            int[][] C = matrixProduct_DAC(A,1,1,B,1,1,n);
+            int[][] C = matrixProduct_Strassen(A,1,1,B,1,1,n);
             return C;
         }
         catch(IllegalArgumentException e){
