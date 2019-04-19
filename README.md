@@ -1,3 +1,10 @@
+# Assignments
+
+- __Lab0__ : Write specific sorting algorithms and print out runtime for various array sizes
+- __Project1__ : Write more sorting algorithms and print out runtime plus comparison counts for various array sizes
+- __Project2 (Part 1)__ : Iterative Matrix Multiplication Algorithm
+- __Project2 (Part 2)__ : Strassen Algorithm and Divide and Conquer Matrix Multiplicaiton
+
 # CSC 349. Design and Analysis of Algorithms. 4 units
 
 Term Typically Offered: F, SP
