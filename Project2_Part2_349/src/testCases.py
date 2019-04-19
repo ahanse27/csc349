@@ -65,7 +65,7 @@ def numpy_solve(file):
 
 
 def test_input_match(file):
-    print("Test input " + file)
+    print("----------\nTest input DAC " + file)
     p = subprocess.Popen(['java', 'MatrixPrint'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, encoding='utf8')
 
     out, err = p.communicate(input=(file+'\n'))
@@ -80,21 +80,38 @@ def test_input_match(file):
        print(np_out)
     print()
 
-def test_error(file):
-    print("Test ERROR " + file)
-    p = subprocess.Popen(['java', 'MatrixPrint'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding='utf8')
+    print("Test input Strassen's " + file)
+    p = subprocess.Popen(['java', 'MatrixPrint2'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, encoding='utf8')
 
     out, err = p.communicate(input=(file+'\n'))
-    err = (err.split("\n")[0].split(" ")[4])
-    print(err == ("java.lang.IllegalArgumentException"))
+
+    out = out[out.find('\n')+1:out.rfind('\n')] #remove extra lines
+    np_out =  numpy_solve(file)
+    res = (out.replace(" ","") == numpy_solve(file).replace(" ",""))
+    print(res)
+    #if (res == False):
+    #    print(out)
+    #    print()
+    #    print(np_out)
     print()
+
+#def test_error(file):
+#    print("Test ERROR " + file)
+#    p = subprocess.Popen(['java', 'MatrixPrint'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding='utf8')
+
+#    out, err = p.communicate(input=(file+'\n'))
+#    out = (out.split("\n")[0].split(" ")[])
+#    print(out == ("Invalid Matrices"))
+#    print(out)
 
 #breaks if newline??
 
 
 test_input_match('test.txt')  #2x2
 test_input_match('test1.txt') #4x4
-#test_input_match('test2.txt') #8x8
+test_input_match('test2.txt') #8x8
+#test_error('test4.txt') #8x8
+
 
 #test case doesnt work for sizes above 9
 
