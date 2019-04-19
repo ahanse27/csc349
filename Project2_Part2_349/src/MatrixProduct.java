@@ -27,6 +27,7 @@ public class MatrixProduct {
     }
     private static int[][] matrixProduct_DAC(int[][]A, int startrowA, int startcolA, int[][] B,
                                       int startrowB, int startcolB, int n){
+        // Solve A * B = C through blocking
         int[][] C = new int[n][n];
         if (n == 1){
             /* Base Case
@@ -37,48 +38,51 @@ public class MatrixProduct {
         }
         else{
             int halfway = n/2;
+            // Solve for first quadrant of C
             int [][] C_one_one = sumMat(matrixProduct_DAC(A, startrowA, startcolA, B,
                                                        startrowB, startcolB, halfway),
                                         matrixProduct_DAC(A, startrowA, halfway + 1, B,
                                                      halfway + 1, startcolB, halfway));
-
+            // Solve for second quadrant of C
             int [][] C_one_two = sumMat(matrixProduct_DAC(A, startrowA, startcolA, B,
                                                  startrowB,halfway + 1 , halfway),
                                         matrixProduct_DAC(A, startrowA, halfway + 1, B,
                                                 halfway + 1, halfway + 1, halfway));
-
+            // Solve for third quadrant of C
             int [][] C_two_one = sumMat(matrixProduct_DAC(A, halfway + 1, startcolA, B,
                                                         startrowB, startcolB, halfway),
                                         matrixProduct_DAC(A, halfway + 1, n/2 + 1, B,
                                                       halfway + 1, 1, halfway));
-
+            // Solve for fourth quadrant of C
             int [][] C_two_two = sumMat(matrixProduct_DAC(A, halfway + 1, startcolA, B,
                                                     startrowB, halfway + 1, halfway),
                                         matrixProduct_DAC(A, halfway + 1, halfway + 1, B,
                                                 halfway + 1, halfway + 1, halfway));
-
+            // Fill C with first quadrant
             for (int i = 0; i < halfway; i++){
                 for (int j = 0; j < halfway; j++){
                     C[i][j] = C_one_one[i][j];
                 }
             }
+            // Fill C with second quadrant
             for (int i = 0; i < halfway; i++){
                 for (int j = 0; j < halfway; j++){
                     C[i][j + halfway] = C_one_two[i][j];
                 }
             }
+            // Fill C with third quadrant
             for (int i = 0; i < halfway; i++){
                 for (int j = 0; j < halfway; j++){
                     C[i + halfway][j] = C_two_one[i][j];
                 }
             }
+            // Fill C with fourth quadrant
             for (int i = 0; i < halfway; i++){
                 for (int j = 0; j < halfway; j++){
                     C[i + halfway][j + halfway] = C_two_two[i][j];
                 }
             }
         }
-
         return C;
     }
     private static int[][] sumMat(int[][] matrix1, int[][] matrix2){
