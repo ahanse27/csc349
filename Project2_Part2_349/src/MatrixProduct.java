@@ -8,7 +8,7 @@ public class MatrixProduct {
         int rowB = B.length;
         int n = A.length;
         try {
-            if (colA != rowB || colA != rowA || colB != rowB || ((n & (n-1)) == 0)) {
+            if (colA != rowB || colA != rowA || colB != rowB || ((n & (n-1)) != 0)) {
                 throw new IllegalArgumentException();
             }
             int[][] C = matrixProduct_DAC(A,1,1,B,1,1,n);
