@@ -8,6 +8,12 @@ public class MatrixProduct {
         int rowB = B.length;
         int n = A.length;
         try {
+            /* Check conditions for Divide and Conquer Matrix Multiplication
+                - A is nxn matrix
+                - B is nxn matrix
+                - n is a power of 2
+                If not throw IllegalArgumentException
+             */
             if (colA != rowB || colA != rowA || colB != rowB || ((n & (n-1)) != 0)) {
                 throw new IllegalArgumentException();
             }
@@ -23,47 +29,52 @@ public class MatrixProduct {
                                       int startrowB, int startcolB, int n){
         int[][] C = new int[n][n];
         if (n == 1){
+            /* Base Case
+             * Since we start indexing row and column at 1 we have to subtract
+             * 1 to account for Java index starting at 0
+             */
             C[0][0] = A[startrowA - 1][startcolA - 1] * B[startrowB - 1][startcolB - 1];
         }
         else{
+            int halfway = n/2;
             int [][] C_one_one = sumMat(matrixProduct_DAC(A, startrowA, startcolA, B,
-                                                       startrowB, startcolB, n/2),
-                                        matrixProduct_DAC(A, startrowA, n/2 + 1, B,
-                                                     n/2 + 1, startcolB, n/2));
+                                                       startrowB, startcolB, halfway),
+                                        matrixProduct_DAC(A, startrowA, halfway + 1, B,
+                                                     halfway + 1, startcolB, halfway));
 
             int [][] C_one_two = sumMat(matrixProduct_DAC(A, startrowA, startcolA, B,
-                                                 startrowB,n/2 + 1 , n/2),
-                                        matrixProduct_DAC(A, startrowA, n/2 + 1, B,
-                                                n/2 + 1, n/2 + 1, n/2));
+                                                 startrowB,halfway + 1 , halfway),
+                                        matrixProduct_DAC(A, startrowA, halfway + 1, B,
+                                                halfway + 1, halfway + 1, halfway));
 
-            int [][] C_two_one = sumMat(matrixProduct_DAC(A, n/2 + 1, startcolA, B,
-                                                        startrowB, startcolB, n/2),
-                                        matrixProduct_DAC(A, n/2 + 1, n/2 + 1, B,
-                                                      n/2 + 1, 1, n/2));
+            int [][] C_two_one = sumMat(matrixProduct_DAC(A, halfway + 1, startcolA, B,
+                                                        startrowB, startcolB, halfway),
+                                        matrixProduct_DAC(A, halfway + 1, n/2 + 1, B,
+                                                      halfway + 1, 1, halfway));
 
-            int [][] C_two_two = sumMat(matrixProduct_DAC(A, n/2 + 1, startcolA, B,
-                                                    startrowB, n/2 + 1, n/2),
-                                        matrixProduct_DAC(A, n/2 + 1, n/2 + 1, B,
-                                                n/2 + 1, n/2 + 1, n/2));
+            int [][] C_two_two = sumMat(matrixProduct_DAC(A, halfway + 1, startcolA, B,
+                                                    startrowB, halfway + 1, halfway),
+                                        matrixProduct_DAC(A, halfway + 1, halfway + 1, B,
+                                                halfway + 1, halfway + 1, halfway));
 
-            for (int i = 0; i < n/2; i++){
-                for (int j = 0; j < n/2; j++){
+            for (int i = 0; i < halfway; i++){
+                for (int j = 0; j < halfway; j++){
                     C[i][j] = C_one_one[i][j];
                 }
             }
-            for (int i = 0; i < n/2; i++){
-                for (int j = 0; j < n/2; j++){
-                    C[i][j + n/2] = C_one_two[i][j];
+            for (int i = 0; i < halfway; i++){
+                for (int j = 0; j < halfway; j++){
+                    C[i][j + halfway] = C_one_two[i][j];
                 }
             }
-            for (int i = 0; i < n/2; i++){
-                for (int j = 0; j < n/2; j++){
-                    C[i + n/2][j] = C_two_one[i][j];
+            for (int i = 0; i < halfway; i++){
+                for (int j = 0; j < halfway; j++){
+                    C[i + halfway][j] = C_two_one[i][j];
                 }
             }
-            for (int i = 0; i < n/2; i++){
-                for (int j = 0; j < n/2; j++){
-                    C[i + n/2][j + n/2] = C_two_two[i][j];
+            for (int i = 0; i < halfway; i++){
+                for (int j = 0; j < halfway; j++){
+                    C[i + halfway][j + halfway] = C_two_two[i][j];
                 }
             }
         }
