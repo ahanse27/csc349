@@ -197,13 +197,11 @@ public class MatrixProduct {
             int[][] P_6 = matrixProduct_Strassen(S_7, 1, 1, S_8, 1, 1, halfway);
             int[][] P_7 = matrixProduct_Strassen(S_9, 1 ,1, S_10, 1, 1, halfway);
             // Solve for first quadrant of C
-            int[][] C_one_one = strassenSub(
-                                strassenAdd(P_5, 1, 1,
-                                            P_4, 1, 1, halfway),1, 1,
-                                strassenAdd(P_2, 1, 1,
-                                            P_6, 1, 1, halfway), 1, 1,
-                                            halfway
-                                           );
+            int[][] C_one_one = strassenAdd(strassenSub(
+                    strassenAdd(P_5, 1, 1,
+                            P_4, 1, 1, halfway),1, 1,
+                    P_2, 1 ,1, halfway),1 ,1,
+                    P_6, 1, 1, halfway);
             // Solve for fourth quadrant of C
             int[][] C_two_two = strassenSub(strassenSub(
                     strassenAdd(P_5, 1, 1,
