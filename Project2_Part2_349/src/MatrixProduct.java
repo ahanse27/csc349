@@ -205,13 +205,11 @@ public class MatrixProduct {
                                             halfway
                                            );
             // Solve for fourth quadrant of C
-            int[][] C_two_two = strassenSub(
+            int[][] C_two_two = strassenSub(strassenSub(
                     strassenAdd(P_5, 1, 1,
                             P_1, 1, 1, halfway),1, 1,
-                    strassenSub(P_3, 1, 1,
-                            P_7, 1, 1, halfway), 1, 1,
-                    halfway
-            );
+                            P_3, 1 ,1, halfway),1 ,1,
+                                P_7, 1, 1, halfway);
             // Solve for third quadrant of C
             int [][] C_one_two = strassenAdd(P_1, 1, 1,
                                             P_2, 1 ,1, halfway);
