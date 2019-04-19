@@ -41,23 +41,23 @@ public class MatrixProduct {
             // Solve for first quadrant of C
             int [][] C_one_one = sumMat(matrixProduct_DAC(A, startrowA, startcolA, B,
                                                        startrowB, startcolB, halfway),
-                                        matrixProduct_DAC(A, startrowA, halfway + 1, B,
-                                                     halfway + 1, startcolB, halfway));
+                                        matrixProduct_DAC(A, startrowA, startcolA + halfway , B,
+                                                     startrowB + halfway , startcolB, halfway));
             // Solve for second quadrant of C
             int [][] C_one_two = sumMat(matrixProduct_DAC(A, startrowA, startcolA, B,
-                                                 startrowB,halfway + 1 , halfway),
-                                        matrixProduct_DAC(A, startrowA, halfway + 1, B,
-                                                halfway + 1, halfway + 1, halfway));
+                                                 startrowB,startcolB + halfway  , halfway),
+                                        matrixProduct_DAC(A, startrowA, startcolA + halfway , B,
+                                                startrowB + halfway , startcolB + halfway, halfway));
             // Solve for third quadrant of C
-            int [][] C_two_one = sumMat(matrixProduct_DAC(A, halfway + 1, startcolA, B,
+            int [][] C_two_one = sumMat(matrixProduct_DAC(A, startrowA + halfway , startcolA, B,
                                                         startrowB, startcolB, halfway),
-                                        matrixProduct_DAC(A, halfway + 1, n/2 + 1, B,
-                                                      halfway + 1, 1, halfway));
+                                        matrixProduct_DAC(A, startrowA + halfway , startcolA+ halfway, B,
+                                                      startrowB + halfway , startcolB, halfway));
             // Solve for fourth quadrant of C
-            int [][] C_two_two = sumMat(matrixProduct_DAC(A, halfway + 1, startcolA, B,
-                                                    startrowB, halfway + 1, halfway),
-                                        matrixProduct_DAC(A, halfway + 1, halfway + 1, B,
-                                                halfway + 1, halfway + 1, halfway));
+            int [][] C_two_two = sumMat(matrixProduct_DAC(A, startrowA + halfway , startcolA, B,
+                                                    startrowB, startcolB + halfway , halfway),
+                                        matrixProduct_DAC(A, startrowA + halfway , startcolA + halfway , B,
+                                                startrowB + halfway , startcolB + halfway , halfway));
             // Fill C with first quadrant
             for (int i = 0; i < halfway; i++){
                 for (int j = 0; j < halfway; j++){

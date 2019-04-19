@@ -26,7 +26,7 @@ public class MatrixPrint{
         String filename = in.nextLine();
         File file = new File(filename);
         Scanner sc = new Scanner(file);
-        int[] matSpec = new int[100];
+        int[] matSpec = new int[1500];
         int i = 0;
         while (sc.hasNextLine()){
             int val = sc.nextInt();
