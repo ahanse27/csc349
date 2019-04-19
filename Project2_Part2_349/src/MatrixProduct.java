@@ -23,7 +23,7 @@ public class MatrixProduct {
                                       int startrowB, int startcolB, int n){
         int[][] C = new int[n][n];
         if (n == 1){
-            C[0][0] = A[startrowA][startcolA] * B[startrowB][startcolB];
+            C[0][0] = A[startrowA - 1][startcolA - 1] * B[startrowB - 1][startcolB - 1];
         }
         else{
             int [][] C_one_one = sumMat(matrixProduct_DAC(A, startrowA, startcolA, B,
@@ -45,6 +45,27 @@ public class MatrixProduct {
                                                     startrowB, n/2 + 1, n/2),
                                         matrixProduct_DAC(A, n/2 + 1, n/2 + 1, B,
                                                 n/2 + 1, n/2 + 1, n/2));
+
+            for (int i = 0; i < n/2; i++){
+                for (int j = 0; j < n/2; j++){
+                    C[i][j] = C_one_one[i][j];
+                }
+            }
+            for (int i = 0; i < n/2; i++){
+                for (int j = 0; j < n/2; j++){
+                    C[i][j + n/2] = C_one_two[i][j];
+                }
+            }
+            for (int i = 0; i < n/2; i++){
+                for (int j = 0; j < n/2; j++){
+                    C[i + n/2][j] = C_two_one[i][j];
+                }
+            }
+            for (int i = 0; i < n/2; i++){
+                for (int j = 0; j < n/2; j++){
+                    C[i + n/2][j + n/2] = C_two_two[i][j];
+                }
+            }
         }
 
         return C;
@@ -56,6 +77,7 @@ public class MatrixProduct {
                 sum[i][j] = matrix1[i][j] + matrix2[i][j];
             }
         }
+        return sum;
     }
     public static  int[][]  matrixProduct_Strassen(int[][] A,int[][] B){
         return new int[1][1];
