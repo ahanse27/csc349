@@ -175,7 +175,7 @@ public class MatrixProduct {
             int[][] S_6 = strassenAdd(B,startrowB, startcolB,
                     B, startrowB + halfway , startcolB + halfway,
                     halfway);
-            int[][] S_7 = strassenSub(A,startrowA + halfway, startcolA,
+            int[][] S_7 = strassenSub(A,startrowA, startcolA + halfway,
                     A, startrowA + halfway , startcolA + halfway,
                     halfway);
             int[][] S_8 = strassenAdd(B,startrowB + halfway, startcolB,

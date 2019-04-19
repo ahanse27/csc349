@@ -89,10 +89,10 @@ def test_input_match(file):
     np_out =  numpy_solve(file)
     res = (out.replace(" ","") == numpy_solve(file).replace(" ",""))
     print(res)
-    #if (res == False):
-    #    print(out)
-    #    print()
-    #    print(np_out)
+    if (res == False):
+        print(out)
+        print()
+        print(np_out)
     print()
 
 #def test_error(file):
