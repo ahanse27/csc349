@@ -16,8 +16,8 @@ public class MatrixProduct {
         }
         catch(IllegalArgumentException e){
             System.out.println("Invalid Matrices");
+            return new int[1][1];
         }
-        return new int[1][1];
     }
     private static int[][] matrixProduct_DAC(int[][]A, int startrowA, int startcolA, int[][] B,
                                       int startrowB, int startcolB, int n){
