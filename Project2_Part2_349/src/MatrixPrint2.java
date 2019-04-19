@@ -1,13 +1,13 @@
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.io.File;
 
-public class MatrixPrint{
+public class MatrixPrint2 {
     public static void main(String[] args)throws FileNotFoundException{
         int[] matSpec = readFile();
         int[][][] matrices = makeMat(matSpec);
         try {
-            int[][] C = MatrixProduct.matrixProduct_DAC(matrices[0], matrices[1]);
+            int[][] C = MatrixProduct.matrixProduct_Strassen(matrices[0], matrices[1]);
             for (int[] row: C){
                 for (int val : row){
                     System.out.print(val + " ");
