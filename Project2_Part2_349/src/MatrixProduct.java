@@ -1,4 +1,4 @@
-import java.util.Arrays;
+//Mani Movva (mmovva@calpoly.edu) and Anish Yakkala (ayakkala@calpoly.edu) Date: 04/26/19 Assignment: Project 2
 
 public class MatrixProduct {
     public static int[][]matrixProduct_DAC(int[][]A, int[][] B) throws IllegalArgumentException{
