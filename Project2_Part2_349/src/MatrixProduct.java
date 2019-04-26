@@ -1,29 +1,23 @@
 import java.util.Arrays;
 
 public class MatrixProduct {
-    public static int[][]matrixProduct_DAC(int[][]A, int[][] B){
+    public static int[][]matrixProduct_DAC(int[][]A, int[][] B) throws IllegalArgumentException{
         int colA = A[0].length;
         int rowA = A.length;
         int colB = B[0].length;
         int rowB = B.length;
         int n = A.length;
-        try {
-            /* Check conditions for Divide and Conquer Matrix Multiplication
-                - A is nxn matrix
-                - B is nxn matrix
-                - n is a power of 2
-                If not throw IllegalArgumentException
-             */
-            if (colA != rowB || colA != rowA || colB != rowB || ((n & (n-1)) != 0)) {
-                throw new IllegalArgumentException();
-            }
-            int[][] C = matrixProduct_DAC(A,1,1,B,1,1,n);
-            return C;
+        /* Check conditions for Divide and Conquer Matrix Multiplication
+            - A is nxn matrix
+            - B is nxn matrix
+            - n is a power of 2
+            If not throw IllegalArgumentException
+         */
+        if (colA != rowB || colA != rowA || colB != rowB || ((n & (n-1)) != 0)) {
+            throw new IllegalArgumentException();
         }
-        catch(IllegalArgumentException e){
-            System.out.println("Invalid Matrices");
-            return new int[1][1];
-        }
+        int[][] C = matrixProduct_DAC(A,1,1,B,1,1,n);
+        return C;
     }
     private static int[][] matrixProduct_DAC(int[][]A, int startrowA, int startcolA, int[][] B,
                                       int startrowB, int startcolB, int n){
