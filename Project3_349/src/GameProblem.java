@@ -1,22 +1,12 @@
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.File;
-import java.util.Arrays;
 
 public class GameProblem{
     public static void main(String[] args)throws FileNotFoundException{
         int[] matSpec = readFile();
         int[][] A = makeMat(matSpec);
-        // System.out.println(Arrays.deepToString(matrix));
         game(A.length, A[0].length,A);
-
-//        int[][] C = matrixProduct(matrices[0], matrices[1]);
-//        for (int[] row: C) {
-//            for (int val : row) {
-//                System.out.print(val + ' ');
-//            }
-//            System.out.println();
-//        }
     }
 
     public static int[] readFile() throws FileNotFoundException{
@@ -67,7 +57,7 @@ public class GameProblem{
 
         S[n-1][m-1] = A[n-1][m-1];
         R[n-1][m-1] = 'e';
-        int[] max =  {n-1,m-1};
+        int[] max =  {n,m};
 
         for (int j = m-2; j >= 0; j--){
             S[n-1][j] = Math.max(S[n-1][j+1],0) + A[n-1][j];
@@ -77,9 +67,9 @@ public class GameProblem{
             else {
                 R[n-1][j] = 'r';
             }
-            if (S[n-1][j] > S[max[0]][max[1]]){
-                    max[0] = n-1;
-                    max[1] = j;
+            if (S[n-1][j] > S[max[0] - 1][max[1] - 1]){
+                    max[0] = n-1 + 1;
+                    max[1] = j + 1;
             }
         }
         for (int i = n-2; i >= 0; i--){
@@ -90,9 +80,9 @@ public class GameProblem{
             else {
                 R[i][m-1] = 'r';
             }
-            if (S[i][m-1] > S[max[0]][max[1]]){
-                max[0] = i;
-                max[1] = m-1;
+            if (S[i][m-1] > S[max[0] - 1][max[1] - 1]){
+                max[0] = i + 1;
+                max[1] = m - 1 + 1;
             }
         }
 
@@ -107,20 +97,26 @@ public class GameProblem{
                     S[i][j] = S[i][j+1] + A[i][j];
                     R[i][j] = 'r';
                 }
-                if (S[i][j] > S[max[0]][max[1]]){
-                    max[0] = i;
-                    max[1] = j;
+                if (S[i][j] > S[max[0] - 1][max[1] - 1]){
+                    max[0] = i + 1;
+                    max[1] = j + 1;
                 }
             }
         }
-        System.out.println(S[max[0]][max[1]]);
-        char instruction = R[max[0]][max[1]];
-        System.out.printf(Arrays.toString(max), "to ");
-//        while (instruction != "e"){
-//            max =
-//                System.out.print( grades[i][j]+ " " );
-//            }
-//        }
+        System.out.println("Best score: " + (S[max[0] - 1][max[1] - 1]));
+        char instruction = 'r';
+        System.out.printf("Best route: ");
+        while (instruction != 'e'){
+            System.out.printf("[" + max[0] + "," + max[1] + "]" + " to ");
+            if (instruction == 'd'){
+                instruction = R[max[0]+1 - 1][max[1] - 1];
+                max[0] = max[0] + 1;
+            } else if (instruction == 'r') {
+                instruction = R[max[0] - 1][max[1] + 1 - 1];
+                max[1] = max[1] + 1;
+            }
+        }
+        System.out.println("exit");
 
     }
 }
