@@ -6,14 +6,17 @@ import java.util.Arrays;
 public class GameProblem{
     public static void main(String[] args)throws FileNotFoundException{
         int[] matSpec = readFile();
-        int[][][] matrices = makeMat(matSpec);
-        int[][] C = matrixProduct(matrices[0], matrices[1]);
-        for (int[] row: C) {
-            for (int val : row) {
-                System.out.print(val + ' ');
-            }
-            System.out.println();
-        }
+        int[][] A = makeMat(matSpec);
+        // System.out.println(Arrays.deepToString(matrix));
+        game(A.length, A[0].length,A);
+
+//        int[][] C = matrixProduct(matrices[0], matrices[1]);
+//        for (int[] row: C) {
+//            for (int val : row) {
+//                System.out.print(val + ' ');
+//            }
+//            System.out.println();
+//        }
     }
 
     public static int[] readFile() throws FileNotFoundException{
@@ -31,7 +34,7 @@ public class GameProblem{
         }
         return matSpec;
     }
-    public static int[][][] makeMat(int[] matSpec){
+    public static int[][] makeMat(int[] matSpec){
         int bufferX = 0;
         int bufferY = 0;
         int nrow = matSpec[0];
@@ -55,60 +58,42 @@ public class GameProblem{
                 idx ++;
             }
         }
-        bufferX = 0;
-        bufferY = 0;
-        nrow = matSpec[idx];
-        idx++;
-        ncol = matSpec[idx];
-        idx++;
-
-        int[][] matrixTwo = new int[nrow][ncol];
-
-        for(int i = 0; i < (nrow * ncol); i++) {
-            if (bufferY < ncol) {
-                matrixTwo[bufferX][bufferY] = matSpec[idx];
-                idx++;
-                bufferY++;
-            } else {
-                bufferY = 0;
-                if (bufferX < nrow) {
-                    bufferX++;
-                    matrixTwo[bufferX][bufferY] = matSpec[idx];
-                    bufferY++;
-                    idx ++;
-                } else {
-                    bufferX = 0;
-                }
-            }
-        }
-        int[][][] matrices = new int[2][matrixOne.length * matrixOne[0].length][matrixTwo.length * matrixTwo[0].length];
-        matrices[0] = matrixOne;
-        matrices[1] = matrixTwo;
-        return matrices;
+        return matrixOne;
     }
 
     public static void game(int n, int m, int[][] A){
         int[][] S = new int[n][m];
         char[][] R = new char[n][m];
 
-        S[i][j] = A[i][j];
-        R[i][j] = 'e';
+        S[n-1][m-1] = A[n-1][m-1];
+        R[n-1][m-1] = 'e';
+        int[] max =  {n-1,m-1};
 
-
-        S[i][j] = max(S[i][j+1],0) + A[i][j];
-        if(S[i][j] ==0){
-            R[i][j] = 'e';
+        for (int j = m-2; j >= 0; j--){
+            S[n-1][j] = Math.max(S[n-1][j+1],0) + A[n-1][j];
+            if(S[n-1][j] == 0){
+                R[n-1][j] = 'e';
+            }
+            else {
+                R[n-1][j] = 'r';
+            }
+            if (S[n-1][j] > S[max[0]][max[1]]){
+                    max[0] = n-1;
+                    max[1] = j;
+            }
         }
-        else {
-            R[i][j] = 'r';
-        }
-
-        S[i][j] = max(S[i+1][j],0) + A[i][j];
-        if(S[i][j]==0){
-            R[i][j] = 'e';
-        }
-        else {
-            R[i][j] = 'd';
+        for (int i = n-2; i >= 0; i--){
+            S[i][m-1] = Math.max(S[i+1][m-1],0) + A[i][m-1];
+            if(S[i][m-1] == 0){
+                R[i][m-1] = 'e';
+            }
+            else {
+                R[i][m-1] = 'r';
+            }
+            if (S[i][m-1] > S[max[0]][max[1]]){
+                max[0] = i;
+                max[1] = m-1;
+            }
         }
 
         for (int i = n-2; i>=0; i--){
@@ -122,13 +107,20 @@ public class GameProblem{
                     S[i][j] = S[i][j+1] + A[i][j];
                     R[i][j] = 'r';
                 }
-
-
-
+                if (S[i][j] > S[max[0]][max[1]]){
+                    max[0] = i;
+                    max[1] = j;
+                }
             }
         }
-
-        System.out.println(Arrays.deepToString(S));
+        System.out.println(S[max[0]][max[1]]);
+        char instruction = R[max[0]][max[1]];
+        System.out.printf(Arrays.toString(max), "to ");
+//        while (instruction != "e"){
+//            max =
+//                System.out.print( grades[i][j]+ " " );
+//            }
+//        }
 
     }
 }
