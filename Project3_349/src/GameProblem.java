@@ -1,54 +1,21 @@
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.File;
+import java.util.Arrays;
 
-public class MatrixWork{
+public class GameProblem{
     public static void main(String[] args)throws FileNotFoundException{
         int[] matSpec = readFile();
         int[][][] matrices = makeMat(matSpec);
-        try {
-            int[][] C = matrixProduct(matrices[0], matrices[1]);
-            for (int[] row: C){
-                for (int val : row){
-                    System.out.print(val + " ");
-                }
-                System.out.println();
+        int[][] C = matrixProduct(matrices[0], matrices[1]);
+        for (int[] row: C) {
+            for (int val : row) {
+                System.out.print(val + ' ');
             }
-        }
-        catch(IllegalArgumentException e){
-            System.out.println("Matrices are incompatible");
-            return;
+            System.out.println();
         }
     }
-    public static int[][]matrixProduct(int[][]A, int[][]B) throws IllegalArgumentException {
-       if (B.length != A[0].length){ //check that mat sizes are valid
-            throw new IllegalArgumentException("Matrices are incompatible");
-        }
-       int[][] multi = new int[A.length][B[0].length];
-       int i = 0;
-       int j = 0;
-       boolean done = false;
-       while (!done){
-           if (i == A.length){
-               i = 0;
-           }
-           else if (j == B[0].length){
-               j = 0;
-               i++;
-           }
-           int val = 0;
-           for (int idx = 0; idx < A[0].length; idx ++){
-               val = val + (A[i][idx] * B[idx][j]);
-           }
-           multi[i][j] = val;
-           j++;
-           if ((j == B[0].length) && (i + 1 == A.length)){
-               done = true;
-           }
-        }
 
-       return multi;
-    }
     public static int[] readFile() throws FileNotFoundException{
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the file name");
@@ -120,4 +87,48 @@ public class MatrixWork{
         return matrices;
     }
 
+    public static void game(int n, int m, int[][] A){
+        int[][] S = new int[n][m];
+        char[][] R = new char[n][m];
+
+        S[i][j] = A[i][j];
+        R[i][j] = 'e';
+
+
+        S[i][j] = max(S[i][j+1],0) + A[i][j];
+        if(S[i][j] ==0){
+            R[i][j] = 'e';
+        }
+        else {
+            R[i][j] = 'r';
+        }
+
+        S[i][j] = max(S[i+1][j],0) + A[i][j];
+        if(S[i][j]==0){
+            R[i][j] = 'e';
+        }
+        else {
+            R[i][j] = 'd';
+        }
+
+        for (int i = n-2; i>=0; i--){
+            for (int j = m-2; j>=0; j--){
+
+                if(S[i+1][j] > S[i][j+1]){
+                    S[i][j] = S[i+1][j] + A[i][j];
+                    R[i][j] = 'd';
+                }
+                else{
+                    S[i][j] = S[i][j+1] + A[i][j];
+                    R[i][j] = 'r';
+                }
+
+
+
+            }
+        }
+
+        System.out.println(Arrays.deepToString(S));
+
+    }
 }
