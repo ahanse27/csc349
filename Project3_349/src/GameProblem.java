@@ -9,7 +9,7 @@ public class GameProblem{
         game(A.length, A[0].length,A);
     }
 
-    public static int[] readFile() throws FileNotFoundException{
+    private static int[] readFile() throws FileNotFoundException{
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the file name");
         String filename = in.nextLine();
@@ -25,7 +25,7 @@ public class GameProblem{
         }
         return matSpec;
     }
-    public static int[][] makeMat(int[] matSpec){
+    private static int[][] makeMat(int[] matSpec){
         int bufferX = 0;
         int bufferY = 0;
         int nrow = matSpec[0];
