@@ -1,3 +1,5 @@
+//Mani Movva (mmovva@calpoly.edu) and Anish Yakkala (ayakkala@calpoly.edu) Date: 05/10/19 Assignment: Project 3
+
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.File;
