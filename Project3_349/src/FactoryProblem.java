@@ -10,6 +10,7 @@ public class FactoryProblem{
         int[] instruc = readFile();
         int n = instruc[0];
         int[] e = new int[2];
+
         e[0] = instruc[1];
         e[1] = instruc[2];
 
@@ -34,7 +35,8 @@ public class FactoryProblem{
         System.out.println(Arrays.deepToString(a));
         System.out.println(Arrays.deepToString(t));
     }
-    public static int[] readFile() throws FileNotFoundException{
+
+    private static int[] readFile() throws FileNotFoundException{
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the file name");
         String filename = in.nextLine();
