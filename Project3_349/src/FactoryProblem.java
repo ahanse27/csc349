@@ -27,10 +27,10 @@ public class FactoryProblem{
         for (int i = 0; i < (t_n * 2); i++){
            t[i / t_n][i % t_n] = instruc[counter + i];
         }
-//        System.out.println(Arrays.toString(e));
-//        System.out.println(Arrays.toString(x));
-//        System.out.println(Arrays.deepToString(a));
-//        System.out.println(Arrays.deepToString(t));
+        System.out.println(Arrays.toString(e));
+        System.out.println(Arrays.toString(x));
+        System.out.println(Arrays.deepToString(a));
+        System.out.println(Arrays.deepToString(t));
     }
     public static int[] readFile() throws FileNotFoundException{
         Scanner in = new Scanner(System.in);
@@ -41,9 +41,11 @@ public class FactoryProblem{
         int[] matSpec = new int[100];
         int i = 0;
         while (sc.hasNextLine()){
-            int val = sc.nextInt();
-            matSpec[i] = val;
-            i++;
+            if (sc.hasNextInt()) {
+                int val = sc.nextInt();
+                matSpec[i] = val;
+                i++;
+            }
         }
         return matSpec;
     }

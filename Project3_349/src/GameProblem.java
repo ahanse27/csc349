@@ -18,9 +18,11 @@ public class GameProblem{
         int[] matSpec = new int[100];
         int i = 0;
         while (sc.hasNextLine()){
-            int val = sc.nextInt();
-            matSpec[i] = val;
-            i++;
+            if (sc.hasNextInt()) {
+                int val = sc.nextInt();
+                matSpec[i] = val;
+                i++;
+            }
         }
         return matSpec;
     }
