@@ -49,17 +49,17 @@ public class FactoryProblem{
 
     private static void printRoute(int[][] L, int start_col, int start_row){
         if (start_col == 0){
-            System.out.println("station " + 1 + ",line " + L[start_row][start_col]);
-            System.out.println("station " + (start_col + 2) + ",line " + (start_row + 1));
+            System.out.println("station " + 1 + ", line " + L[start_row][start_col]);
+            System.out.println("station " + (start_col + 2) + ", line " + (start_row + 1));
         }
         else{
             if (L[start_row][start_col] == 1){
                 printRoute(L, start_col - 1, 0);
-                System.out.println("station " + (start_col + 2) + ",line " + (start_row + 1));
+                System.out.println("station " + (start_col + 2) + ", line " + (start_row + 1));
             }
             else{
                 printRoute(L, start_col - 1, 1);
-                System.out.println("station " + (start_col + 2) + ",line " + (start_row + 1));
+                System.out.println("station " + (start_col + 2) + ", line " + (start_row + 1));
             }
         }
     }
