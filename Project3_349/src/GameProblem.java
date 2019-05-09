@@ -65,7 +65,7 @@ public class GameProblem{
 
         for (int j = m-2; j >= 0; j--){
             S[n-1][j] = Math.max(S[n-1][j+1],0) + A[n-1][j];
-            if(S[n-1][j] == 0){
+            if(S[n-1][j] < 0){
                 R[n-1][j] = 'e';
             }
             else {
