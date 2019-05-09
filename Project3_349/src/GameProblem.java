@@ -3,6 +3,7 @@
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.File;
+import java.util.Arrays;
 
 public class GameProblem{
     public static void main(String[] args)throws FileNotFoundException{
@@ -77,18 +78,17 @@ public class GameProblem{
         }
         for (int i = n-2; i >= 0; i--){
             S[i][m-1] = Math.max(S[i+1][m-1],0) + A[i][m-1];
-            if(S[i][m-1] == 0){
+            if(S[i+1][m-1] < 0){
                 R[i][m-1] = 'e';
             }
             else {
-                R[i][m-1] = 'r';
+                R[i][m-1] = 'd';
             }
             if (S[i][m-1] > S[max[0] - 1][max[1] - 1]){
                 max[0] = i + 1;
                 max[1] = m - 1 + 1;
             }
         }
-
         for (int i = n-2; i>=0; i--){
             for (int j = m-2; j>=0; j--){
 
@@ -106,17 +106,24 @@ public class GameProblem{
                 }
             }
         }
+
         System.out.println("Best score: " + (S[max[0] - 1][max[1] - 1]));
-        char instruction = 'r';
+        char instruction = R[max[0] - 1][max[1] - 1];
         System.out.printf("Best route: ");
-        while (instruction != 'e'){
+        if (instruction == 'e'){
             System.out.printf("[" + max[0] + "," + max[1] + "]" + " to ");
-            if (instruction == 'd'){
-                instruction = R[max[0]+1 - 1][max[1] - 1];
-                max[0] = max[0] + 1;
-            } else if (instruction == 'r') {
-                instruction = R[max[0] - 1][max[1] + 1 - 1];
-                max[1] = max[1] + 1;
+        }
+        else {
+            while (instruction != 'e') {
+                System.out.printf("[" + max[0] + "," + max[1] + "]" + " to ");
+                if (instruction == 'd') {
+                    instruction = R[max[0] + 1 - 1][max[1] - 1];
+                    max[0] = max[0] + 1;
+                } else if (instruction == 'r') {
+                    //System.out.println(Arrays.toString(max));
+                    instruction = R[max[0] - 1][max[1] + 1 - 1];
+                    max[1] = max[1] + 1;
+                }
             }
         }
         System.out.println("exit");
