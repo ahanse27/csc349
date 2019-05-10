@@ -3,6 +3,7 @@
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.File;
+import java.util.Arrays;
 
 public class GameProblem{
     public static void main(String[] args)throws FileNotFoundException{
@@ -64,7 +65,7 @@ public class GameProblem{
 
         for (int j = m-2; j >= 0; j--){
             S[n-1][j] = Math.max(S[n-1][j+1],0) + A[n-1][j];
-            if(S[n-1][j] < 0){
+            if(S[n-1][j+1] < 0){
                 R[n-1][j] = 'e';
             }
             else {
@@ -75,6 +76,8 @@ public class GameProblem{
                     max[1] = j + 1;
             }
         }
+/*        System.out.println(Arrays.deepToString(S));
+        System.out.println(Arrays.deepToString(R));*/
         for (int i = n-2; i >= 0; i--){
             S[i][m-1] = Math.max(S[i+1][m-1],0) + A[i][m-1];
             if(S[i+1][m-1] < 0){
@@ -88,6 +91,8 @@ public class GameProblem{
                 max[1] = m - 1 + 1;
             }
         }
+/*        System.out.println(Arrays.deepToString(S));
+        System.out.println(Arrays.deepToString(R));*/
         for (int i = n-2; i>=0; i--){
             for (int j = m-2; j>=0; j--){
 
@@ -105,6 +110,8 @@ public class GameProblem{
                 }
             }
         }
+/*        System.out.println(Arrays.deepToString(S));
+        System.out.println(Arrays.deepToString(R));*/
         System.out.println("Best score: " + (S[max[0] - 1][max[1] - 1]));
         char instruction = R[max[0] - 1][max[1] - 1];
         System.out.printf("Best route: ");
