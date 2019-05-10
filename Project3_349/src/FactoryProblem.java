@@ -33,7 +33,7 @@ public class FactoryProblem{
         int[][][] answers = solveChassis(e, x, a, t);
         int[][] F = answers[0];
         int[][] L = answers[1];
-        int[][] empty = answers[2];
+
         int min = 0;
         int start = 1;
         if (F[0][a[0].length - 1] + x[0] < F[1][a[0].length - 1] + x[1]){
@@ -46,7 +46,7 @@ public class FactoryProblem{
         }
         System.out.println("Fastest time is: " + min +"\n");
         System.out.println("The optimal route is:");
-        if (empty[0][0] == 1) {
+        if (n > 1) {
             printRoute(L, L[0].length - 1, start);
         }
         else{
@@ -75,7 +75,7 @@ public class FactoryProblem{
         int[][] F = new int[2][a[0].length];
         int[][] L = new int[2][a[0].length - 1];
         int[][] empty = new int[1][1];
-        empty[0][0] = 0;
+
         if(a[0].length > 1){
             empty[0][0] = 1;
         }
@@ -101,10 +101,10 @@ public class FactoryProblem{
                 L[1][i - 1] = 2;
             }
         }
-        int[][][] answers = new int[3][2][a[0].length];
+        int[][][] answers = new int[2][2][a[0].length];
         answers[0] = F;
         answers[1] = L;
-        answers[2] = empty;
+
         return answers;
     }
 
