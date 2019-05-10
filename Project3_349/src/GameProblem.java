@@ -3,7 +3,6 @@
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.File;
-import java.util.Arrays;
 
 public class GameProblem{
     public static void main(String[] args)throws FileNotFoundException{
@@ -120,7 +119,6 @@ public class GameProblem{
                     instruction = R[max[0] + 1 - 1][max[1] - 1];
                     max[0] = max[0] + 1;
                 } else if (instruction == 'r') {
-                    //System.out.println(Arrays.toString(max));
                     instruction = R[max[0] - 1][max[1] + 1 - 1];
                     max[1] = max[1] + 1;
                 }

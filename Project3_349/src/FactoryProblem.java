@@ -23,15 +23,17 @@ public class FactoryProblem{
             a[i / n][i % n] = instruc[5 + i];
             counter++;
         }
-
         int t_n = n - 1;
         int[][] t = new int[2][t_n];
-        for (int i = 0; i < (t_n * 2); i++) {
-            t[i / t_n][i % t_n] = instruc[counter + i];
+        if (n > 1) {
+            for (int i = 0; i < (t_n * 2); i++) {
+                t[i / t_n][i % t_n] = instruc[counter + i];
+            }
         }
         int[][][] answers = solveChassis(e, x, a, t);
         int[][] F = answers[0];
         int[][] L = answers[1];
+        int[][] empty = answers[2];
         int min = 0;
         int start = 1;
         if (F[0][a[0].length - 1] + x[0] < F[1][a[0].length - 1] + x[1]){
@@ -44,7 +46,12 @@ public class FactoryProblem{
         }
         System.out.println("Fastest time is: " + min +"\n");
         System.out.println("The optimal route is:");
-        printRoute(L,L[0].length - 1, start);
+        if (empty[0][0] == 1) {
+            printRoute(L, L[0].length - 1, start);
+        }
+        else{
+            System.out.println("station " + 1 + ", line " + (start+1));
+        }
     }
 
     private static void printRoute(int[][] L, int start_col, int start_row){
@@ -67,6 +74,11 @@ public class FactoryProblem{
     private static int[][][] solveChassis(int[] e, int[] x, int[][]a, int[][]t){
         int[][] F = new int[2][a[0].length];
         int[][] L = new int[2][a[0].length - 1];
+        int[][] empty = new int[1][1];
+        empty[0][0] = 0;
+        if(a[0].length > 1){
+            empty[0][0] = 1;
+        }
         F[0][0] = a[0][0] + e[0];
         F[1][0] = a[1][0] + e[1];
         for (int i = 1; i < a[0].length; i++){
@@ -89,9 +101,10 @@ public class FactoryProblem{
                 L[1][i - 1] = 2;
             }
         }
-        int[][][] answers = new int[2][2][a[0].length];
+        int[][][] answers = new int[3][2][a[0].length];
         answers[0] = F;
         answers[1] = L;
+        answers[2] = empty;
         return answers;
     }
 
