@@ -106,12 +106,12 @@ public class GameProblem{
                 }
             }
         }
-
         System.out.println("Best score: " + (S[max[0] - 1][max[1] - 1]));
         char instruction = R[max[0] - 1][max[1] - 1];
         System.out.printf("Best route: ");
         if (instruction == 'e'){
             System.out.printf("[" + max[0] + "," + max[1] + "]" + " to ");
+            System.out.println("exit");
         }
         else {
             while (instruction != 'e') {
@@ -125,8 +125,10 @@ public class GameProblem{
                     max[1] = max[1] + 1;
                 }
             }
+
+            System.out.printf("[" + max[0] + "," + max[1] + "]" + " to ");
+            System.out.println("exit");
         }
-        System.out.println("exit");
 
     }
 }
