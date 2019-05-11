@@ -8,9 +8,8 @@ import java.util.Arrays;
 public class ChangeMaker {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter the number of coins");
-        int k = in.nextInt();
         System.out.println("\nEnter the number of coin-denominations and the set of coin values:");
+        int k = in.nextInt();
         int[] d = new int[k];
         int counter = 0;
         while (counter < k) {
@@ -79,5 +78,6 @@ public class ChangeMaker {
         //System.out.println(Arrays.toString(counts));
         return counts;
     }
+
 
 }
