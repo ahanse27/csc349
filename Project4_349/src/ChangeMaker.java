@@ -23,19 +23,39 @@ public class ChangeMaker {
                 System.out.println("Thanks for playing. Good Bye.");
                 System.exit(0);
             }
-            int[] counts = change_DP(n, d);
+            int[] counts_DP = change_DP(n, d);
+            int[] counts_greedy = change_greedy(n, d);
+
+            //printing for DP
             System.out.println("\nDP algorithm results");
             System.out.println("Amount: " + n);
             System.out.printf("Optimal distribution: ");
             int sum = 0;
             for (int i = 0; i < d.length; i++) {
-                if (counts[i] > 0) {
+                if (counts_DP[i] > 0) {
                     if (sum > 0) {
-                        System.out.printf(" + " + counts[i] + "*" + d[i] + "c");
+                        System.out.printf(" + " + counts_DP[i] + "*" + d[i] + "c");
                     } else {
-                        System.out.printf("" + counts[i] + "*" + d[i] + "c");
+                        System.out.printf("" + counts_DP[i] + "*" + d[i] + "c");
                     }
-                    sum = sum + counts[i];
+                    sum = sum + counts_DP[i];
+                }
+            }
+            System.out.println("\nOptimal coin count: " + sum);
+
+            //printing for greedy
+            System.out.println("\nGreedy algorithm results");
+            System.out.println("Amount: " + n);
+            System.out.printf("Optimal distribution: ");
+            sum = 0;
+            for (int i = 0; i < d.length; i++) {
+                if (counts_greedy[i] > 0) {
+                    if (sum > 0) {
+                        System.out.printf(" + " + counts_greedy[i] + "*" + d[i] + "c");
+                    } else {
+                        System.out.printf("" + counts_greedy[i] + "*" + d[i] + "c");
+                    }
+                    sum = sum + counts_greedy[i];
                 }
             }
             System.out.println("\nOptimal coin count: " + sum);
@@ -79,5 +99,24 @@ public class ChangeMaker {
         return counts;
     }
 
+    public static int[] change_greedy(int n, int[] d){
+        int[] counts = new int[d.length];
+        int remaining = n;
+        int coin = 0;
+        while (remaining > 0){
+            while(coin < d.length-1){
+                // find the highest denomination coin less than or equal to the remaining amount
+                if (d[coin] <= remaining) break;
+                else{
+                    coin = coin+1;
+                }
+            }
+
+            counts[coin] = remaining/d[coin];;
+            remaining = remaining % d[coin];
+        }
+
+        return counts;
+    }
 
 }
