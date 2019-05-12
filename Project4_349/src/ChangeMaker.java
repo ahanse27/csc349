@@ -65,7 +65,7 @@ public class ChangeMaker {
     public static int[] change_DP(int n, int[] d) {
         int[] C = new int[n];
         int[] A = new int[n];
-        C[0] = d.length - 1;
+        C[0] = 1;
         A[0] = d.length - 1;
         for (int i = 2; i <= n; i++){
             int min = 9999;
@@ -75,7 +75,7 @@ public class ChangeMaker {
                if (count > 0) {
                    int added = 0;
                    if (remainder != 0){
-                       added = C[remainder];
+                       added = C[remainder - 1];
                    }
                    if (count + added < min) {
                        min = count + added;
@@ -95,7 +95,6 @@ public class ChangeMaker {
             counts[next_coin] = counts[next_coin] + 1;
             count_down = count_down - d[next_coin];
         }
-        //System.out.println(Arrays.toString(counts));
         return counts;
     }
 
