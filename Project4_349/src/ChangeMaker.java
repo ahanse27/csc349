@@ -70,13 +70,15 @@ public class ChangeMaker {
         for (int i = 2; i <= n; i++){
             int min = 9999;
             for (int j = 0; j < d.length; j++){
-               int count = i/d[j];
-               int remainder = i % d[j];
-               if (count > 0) {
-                   int added = 0;
-                   if (remainder != 0){
-                       added = C[remainder - 1];
-                   }
+               int remainder = i - d[j];
+               if (remainder == 0){
+                   min = 0;
+                   C[i - 1] = 1;
+                   A[i - 1] = j;
+               }
+               else if (remainder > 0) {
+                   int count = 1;
+                   int added = C[remainder - 1];
                    if (count + added < min) {
                        min = count + added;
                        C[i - 1] = min;

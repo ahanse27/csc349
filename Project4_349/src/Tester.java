@@ -1,5 +1,5 @@
 //Mani Movva (mmovva@calpoly.edu) and Anish Yakkala (ayakkala@calpoly.edu) Date: 05/10/19 Assignment: Project 4
-import java.util.Arrays;
+
 public class Tester {
 
     public static void main(String[] args) {
@@ -24,6 +24,10 @@ public class Tester {
                     sum_greedy += greedy[k];
                 }
                 if (sum_dp == sum_greedy) matches++;
+                else if (i == 0){
+                    System.out.println(j);
+                    System.exit(0);
+                }
             }
 
             System.out.println("Testing set" + (i+1) + ": " + matches + " matches in 200 tests");
