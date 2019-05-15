@@ -1,9 +1,6 @@
-//Mani Movva (mmovva@calpoly.edu) and Anish Yakkala (ayakkala@calpoly.edu) Date: 05/10/19 Assignment: Project 4
+//Mani Movva (mmovva@calpoly.edu) and Anish Yakkala (ayakkala@calpoly.edu) Date: 05/24/19 Assignment: Project 4
 
 import java.util.Scanner;
-import java.io.FileNotFoundException;
-import java.io.File;
-import java.util.Arrays;
 
 public class ChangeMaker {
     public static void main(String[] args) {
