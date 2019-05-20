@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class DiGraph {
+class DiGraph {
     private LinkedList<Integer>[] Adj;
 
     public void DiGraph(int N){
