@@ -36,10 +36,10 @@ public class DiGraph {
             if (Adj[i].size() > 1) {
                 for (int j = 1; j < Adj[i].size(); j++) {
                     if (j == 1) {
-                        System.out.printf(" " + Adj[i].get(j));
+                        System.out.printf(" " + (Adj[i].get(j) + 1));
                     }
                     else{
-                        System.out.printf(", " + Adj[i].get(j));
+                        System.out.printf(", " + (Adj[i].get(j) + 1));
                     }
                 }
             }
