@@ -1,11 +1,12 @@
 import java.util.LinkedList;
 
-class DiGraph {
+public class DiGraph {
     private LinkedList<Integer>[] Adj;
 
-    public void DiGraph(int N){
+    public DiGraph(int N){
         this.Adj = new LinkedList[N];
         for (int i = 0; i < N; i++){
+            Adj[i] = new LinkedList<Integer>();
             Adj[i].add(i);
         }
     }
