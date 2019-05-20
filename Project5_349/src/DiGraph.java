@@ -33,7 +33,7 @@ public class DiGraph {
     }
     public void print(){
         for (int i = 0; i < Adj.length; i++){
-            System.out.printf("" + (i + 1) + "is connected to:");
+            System.out.printf("" + (i + 1) + " is connected to:");
             if (Adj[i].size() > 1) {
                 for (int j = 1; j < Adj[i].size(); j++) {
                     if (j == 1) {
@@ -44,9 +44,7 @@ public class DiGraph {
                     }
                 }
             }
-            if (i != Adj.length - 1) {
-                System.out.printf("\n");
-            }
+            System.out.printf("\n");
         }
     }
 }
