@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class DiGraphTest {
@@ -45,6 +46,10 @@ public class DiGraphTest {
                 case "p":
                     System.out.println("\nThe graph is the following:");
                     test.print();
+                    break;
+                case "t":
+                    Array sorted = test.topSort();
+                    System.out.println("\nThe topologically sorted graph is " + (sorted).toString().replace("[", "").replace("]",""));
                     break;
                 case "q":
                     System.exit(0);
