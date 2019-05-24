@@ -3,6 +3,10 @@ import java.util.Scanner;
 public class DiGraphTest {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+
+        System.out.println("How many vertices would you like?");
+        DiGraph test = new DiGraph(in.nextInt());
+
         System.out.println("Choose one of the following operations:\n" +
                 "- add edge (enter a)\n" +
                 "- delete edge (enter d)\n" +
@@ -11,7 +15,6 @@ public class DiGraphTest {
                 "- print graph (enter p)\n" +
                 "- Quit (enter q)");
 
-        DiGraph test = new DiGraph(3);
         String code = in.next();
         while (1 == 1) {
             switch (code){
