@@ -58,15 +58,15 @@ public class DiGraph {
         return lIndegree;
     }
     public int[] topSort(){
-        int[] indegree = indegrees();
-        LinkedList<Integer> PQ = new LinkedList<Integer>();
-        int[] sortedList = new int[Adj.length];
-        for (int i = 0; i < indegree.length; i++){
-            if (indegree[i] == 0) {
-                PQ.addLast(i);
+            int[] indegree = indegrees();
+            LinkedList<Integer> PQ = new LinkedList<Integer>();
+            int[] sortedList = new int[Adj.length];
+            for (int i = 0; i < indegree.length; i++){
+                if (indegree[i] == 0) {
+                    PQ.addLast(i);
+                }
             }
-        }
-        int counter = 0;
+            int counter = 0;
         while (!PQ.isEmpty()){
             int v = PQ.removeFirst();
             for (int u :Adj[v]){
