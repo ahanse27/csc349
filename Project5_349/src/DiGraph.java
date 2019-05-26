@@ -78,7 +78,7 @@ public class DiGraph {
             sortedList[counter] = v + 1;
             counter++;
         }
-        if (counter != Adj.length + 1){
+        if (counter != Adj.length){
             throw new IllegalArgumentException();
         }
         return sortedList;
