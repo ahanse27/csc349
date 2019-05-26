@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class RoughTester {
     public static void main(String[] args){
         DiGraph test = new DiGraph(3);
@@ -10,6 +11,8 @@ public class RoughTester {
         System.out.println(test.edgeCount());
         System.out.println("Graph Printout");
         test.print();
+        System.out.println("indegree");
+        System.out.println(Arrays.toString(test.indegrees()));
         System.out.println("\nAfter Deleting an Edge");
         test.deleteEdge(1,4);
         test.deleteEdge(1,2);

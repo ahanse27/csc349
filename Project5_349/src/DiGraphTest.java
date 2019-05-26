@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class DiGraphTest {
@@ -45,6 +46,14 @@ public class DiGraphTest {
                 case "p":
                     System.out.println("\nThe graph is the following:");
                     test.print();
+                    break;
+                case "t":
+                    int[] sortedList = test.topSort();
+                    for (int i = 0; i < sortedList.length - 1; i++){
+                        System.out.printf("" + sortedList[i] + ", ");
+                    }
+                    System.out.printf("" + sortedList[sortedList.length - 1]);
+                    System.out.println();
                     break;
                 case "q":
                     System.exit(0);

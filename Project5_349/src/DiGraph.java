@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public class DiGraph {
@@ -46,5 +47,40 @@ public class DiGraph {
             }
             System.out.printf("\n");
         }
+    }
+    public int[] indegrees(){
+        int[] lIndegree = new int[Adj.length];
+        for (int i = 0; i < Adj.length; i++){
+            for (int j = 1; j < Adj[i].size(); j++) {
+                lIndegree[Adj[i].get(j)] = lIndegree[Adj[i].get(j)] + 1;
+            }
+        }
+        return lIndegree;
+    }
+    public int[] topSort(){
+        int[] indegree = indegrees();
+        LinkedList<Integer> PQ = new LinkedList<Integer>();
+        int[] sortedList = new int[Adj.length];
+        for (int i = 0; i < indegree.length; i++){
+            if (indegree[i] == 0) {
+                PQ.addLast(i);
+            }
+        }
+        int counter = 0;
+        while (!PQ.isEmpty()){
+            int v = PQ.removeFirst();
+            for (int u :Adj[v]){
+                indegree[u] = indegree[u] - 1;
+                if (indegree[u] == 0){
+                    PQ.addLast(u);
+                }
+            }
+            sortedList[counter] = v + 1;
+            counter++;
+        }
+        if (counter != Adj.length + 1){
+            throw new IllegalArgumentException();
+        }
+        return sortedList;
     }
 }
