@@ -25,7 +25,6 @@ public class DiGraphTest {
                 case "a":
                     System.out.println("\nEnter start and destination vertex");
                     int from = Integer.parseInt(in.next());
-                    //System.out.println("Enter destination vertex");
                     int to = Integer.parseInt(in.next());
                     test.addEdge(from,to);
                     System.out.println("\n(" + from + ", " + to + ")" + " is now added to the graph");
@@ -33,7 +32,6 @@ public class DiGraphTest {
                 case "d":
                     System.out.println("\nEnter start and destination vertex");
                     from = in.nextInt();
-                    //System.out.println("Enter destination vertex");
                     to = in.nextInt();
                     test.deleteEdge(from,to);
                     System.out.println("\nDeleted edge (" + from + ", " + to + ")");
@@ -62,6 +60,33 @@ public class DiGraphTest {
                     }
                     catch(IllegalArgumentException e){
                         System.out.println("Graph is cyclic!");
+                    }
+                    break;
+                case "i":
+                    System.out.println("\nEnter start and destination vertex");
+                    from = in.nextInt();
+                    to = in.nextInt();
+                    Boolean path = test.isTherePath(from,to);
+                    if (path == Boolean.TRUE){
+                        System.out.println("\nThere is a path from " +from + " to " + to + ".");
+                    }
+                    System.out.println("\nThere is not a path from " +from + " to " + to + ".");
+                    break;
+                case "l":
+                    System.out.println("\nEnter start and destination vertex");
+                    from = in.nextInt();
+                    to = in.nextInt();
+                    int length = test.lengthOfPath(from,to);
+                    System.out.println("\nThe path from " +from + " to " + to + " is " + length + " long.");
+                    break;
+                case "s":
+                    System.out.println("\nEnter start and destination vertex");
+                    from = in.nextInt();
+                    to = in.nextInt();
+                    path = test.isTherePath(from,to);
+                    if (path == Boolean.TRUE) {
+                        System.out.println("\nThe shortest path is the following:");
+                        test.printPath(from, to);
                     }
                     break;
                 case "q":
