@@ -11,6 +11,31 @@ public class DiGraph {
             Adj[i].add(i);
         }
     }
+    private class VertexInfo{
+        public int distance;
+        public int pred;
+        public VertexInfo(int distance, int pred){
+            this.distance = distance;
+            this.pred = pred;
+        }
+    }
+    private VertexInfo[] BFS(int s){
+        VertexInfo[] searched = new VertexInfo[Adj.length];
+        LinkedList<Integer> Q = new LinkedList<Integer>();
+        for (int i = 0; i < Adj.length; i++){
+            searched[i] = new VertexInfo(9999, -1);
+        }
+        searched[s].distance = 0;
+        Q.addLast(s);
+        while(!Q.isEmpty()){
+            int v = Q.removeFirst();
+            for (int u : Adj[v]){
+                searched[u].distance = searched[v].distance + 1;
+                Q.addLast(u);
+            }
+        }
+
+    }
     public void addEdge(int from, int to){
         if (!Adj[from - 1].contains(to - 1)){
             Adj[from - 1].add(to - 1);
