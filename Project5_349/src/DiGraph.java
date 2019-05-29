@@ -12,6 +12,7 @@ public class DiGraph {
             Adj[i].add(i);
         }
     }
+
     private class VertexInfo{
         public int distance;
         public int pred;
@@ -75,13 +76,24 @@ public class DiGraph {
     }
 
     public void printTree(int s){
+        TreeNode root = buildTree(s);
+        printTreeAux(root,0);
         return;
+    }
+
+    private void printTreeAux(TreeNode root, int l){
+        System.out.println("  ".repeat(l) + root.vertexNum);
+        for(int i=0; i<root.children.size(); i++)
+        {
+            printTreeAux(root.children.get(i),l+1);
+        }
     }
 
     public boolean isTherePath(int from, int to){
         VertexInfo[] searched = BFS(from - 1);
         return (searched[to - 1].pred != -1);
     }
+
     public int lengthOfPath(int from, int to){
         VertexInfo[] searched = BFS(from - 1);
         int u = to - 1;
@@ -95,6 +107,7 @@ public class DiGraph {
         }
         return counter;
     }
+
     public void printPath(int from, int to){
         VertexInfo[] searched = BFS(from - 1);
         if (searched[to - 1].pred == -1){
@@ -114,12 +127,14 @@ public class DiGraph {
             Adj[from - 1].add(to - 1);
         }
     }
+
     public void deleteEdge(int from, int to){
         int toIndex = Adj[from - 1].indexOf(to - 1);
         if (toIndex != -1){
             Adj[from - 1].remove(toIndex);
         }
     }
+
     public int edgeCount(){
         int sum = 0;
         for (LinkedList<Integer> ll : Adj){
@@ -127,9 +142,11 @@ public class DiGraph {
         }
         return sum;
     }
+
     public int vertexCount(){
         return Adj.length;
     }
+
     public void print(){
         for (int i = 0; i < Adj.length; i++){
             System.out.printf("" + (i + 1) + " is connected to:");
@@ -146,6 +163,7 @@ public class DiGraph {
             System.out.printf("\n");
         }
     }
+
     public int[] indegrees(){
         int[] lIndegree = new int[Adj.length];
         for (int i = 0; i < Adj.length; i++){
@@ -155,6 +173,7 @@ public class DiGraph {
         }
         return lIndegree;
     }
+
     public int[] topSort(){
             int[] indegree = indegrees();
             LinkedList<Integer> PQ = new LinkedList<Integer>();

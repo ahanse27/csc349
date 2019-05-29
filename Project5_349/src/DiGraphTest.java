@@ -99,6 +99,7 @@ public class DiGraphTest {
                     int source = in.nextInt();
                     System.out.println("\nThe breadth-first-tree is the following:");
                     test.printTree(source);
+                    break;
                 default:
                     System.out.println("Not a valid input!");
             }
