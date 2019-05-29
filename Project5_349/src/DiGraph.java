@@ -2,6 +2,22 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 public class DiGraph {
+
+    private class TreeNode {
+
+        private TreeNode(int vertexNum, LinkedList<TreeNode> children){
+            this.vertexNum = vertexNum;
+            this.children = children;
+        }
+
+        private TreeNode buildTree(int s){
+
+        }
+
+        public printTree(int s){
+
+        }
+    }
     private LinkedList<Integer>[] Adj;
 
     public DiGraph(int N){
