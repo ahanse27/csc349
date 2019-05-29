@@ -66,11 +66,13 @@ public class DiGraphTest {
                     System.out.println("\nEnter start and destination vertex");
                     from = in.nextInt();
                     to = in.nextInt();
-                    Boolean path = test.isTherePath(from,to);
-                    if (path == Boolean.TRUE){
+                    boolean path = test.isTherePath(from,to);
+                    if (path){
                         System.out.println("\nThere is a path from " +from + " to " + to + ".");
                     }
-                    System.out.println("\nThere is not a path from " +from + " to " + to + ".");
+                    else {
+                        System.out.println("\nThere is not a path from " + from + " to " + to + ".");
+                    }
                     break;
                 case "l":
                     System.out.println("\nEnter start and destination vertex");

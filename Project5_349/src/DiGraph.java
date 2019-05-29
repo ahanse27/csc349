@@ -4,18 +4,19 @@ import java.util.LinkedList;
 public class DiGraph {
 
     private class TreeNode {
-
+        public int vertexNum;
+        public LinkedList<TreeNode> children;
         private TreeNode(int vertexNum, LinkedList<TreeNode> children){
             this.vertexNum = vertexNum;
             this.children = children;
         }
 
-        private TreeNode buildTree(int s){
+/*        private TreeNode buildTree(int s){
+            return new TreeNode();
+        }*/
 
-        }
-
-        public printTree(int s){
-
+        public void printTree(int s){
+            return;
         }
     }
     private LinkedList<Integer>[] Adj;
@@ -39,20 +40,52 @@ public class DiGraph {
         VertexInfo[] searched = new VertexInfo[Adj.length];
         LinkedList<Integer> Q = new LinkedList<Integer>();
         for (int i = 0; i < Adj.length; i++){
-            searched[i] = new VertexInfo(9999, -1);
+            searched[i] = new VertexInfo(-1, -1);
         }
         searched[s].distance = 0;
         Q.addLast(s);
         while(!Q.isEmpty()){
             int v = Q.removeFirst();
             for (int u : Adj[v]){
-                searched[u].distance = searched[v].distance + 1;
-                searched[u].pred = v;
-                Q.addLast(u);
+                if (searched[u].distance == -1) {
+                    searched[u].distance = searched[v].distance + 1;
+                    searched[u].pred = v;
+                    Q.addLast(u);
+                }
             }
         }
         return searched;
-
+    }
+    public boolean isTherePath(int from, int to){
+        VertexInfo[] searched = BFS(from - 1);
+        return (searched[to - 1].pred != -1);
+    }
+    public int lengthOfPath(int from, int to){
+        VertexInfo[] searched = BFS(from - 1);
+        int u = to - 1;
+        if (searched[u].pred == -1){
+            return -1;
+        }
+        int counter = 0;
+        while (searched[u].pred != -1){
+            counter++;
+            u = searched[u].pred;
+        }
+        return counter;
+    }
+    public void printPath(int from, int to){
+        VertexInfo[] searched = BFS(from - 1);
+        if (searched[to - 1].pred == -1){
+            System.out.println("There is no path");
+            return;
+        }
+        String output = "";
+        int u = to - 1;
+        while (searched[u].pred != -1){
+            output = " to " + (u + 1) + output;
+            u = searched[u].pred;
+        }
+        System.out.println("" + from + output);
     }
     public void addEdge(int from, int to){
         if (!Adj[from - 1].contains(to - 1)){
