@@ -3,22 +3,6 @@ import java.util.LinkedList;
 
 public class DiGraph {
 
-    private class TreeNode {
-        public int vertexNum;
-        public LinkedList<TreeNode> children;
-        private TreeNode(int vertexNum, LinkedList<TreeNode> children){
-            this.vertexNum = vertexNum;
-            this.children = children;
-        }
-
-/*        private TreeNode buildTree(int s){
-            return new TreeNode();
-        }*/
-
-        public void printTree(int s){
-            return;
-        }
-    }
     private LinkedList<Integer>[] Adj;
 
     public DiGraph(int N){
@@ -36,6 +20,17 @@ public class DiGraph {
             this.pred = pred;
         }
     }
+
+    private class TreeNode {
+        public int vertexNum;
+        public LinkedList<TreeNode> children;
+
+        private TreeNode() {
+            int vertexNum;
+            LinkedList<TreeNode> children;
+        }
+    }
+
     private VertexInfo[] BFS(int s){
         VertexInfo[] searched = new VertexInfo[Adj.length];
         LinkedList<Integer> Q = new LinkedList<Integer>();
@@ -56,6 +51,33 @@ public class DiGraph {
         }
         return searched;
     }
+
+    private TreeNode buildTree(int s){
+        VertexInfo[] searched = this.BFS(s);
+        TreeNode[] RootList = new TreeNode[searched.length];
+
+        for(int i=0; i<RootList.length; i++)
+        {
+            RootList[i] =  new TreeNode();
+            RootList[i].vertexNum = i+1;
+            RootList[i].children = new LinkedList<TreeNode>();
+        }
+
+        for(int i=0; i<searched.length; i++)
+        {
+            if(searched[i].pred != -1)
+            {
+                RootList[searched[i].pred-1].children.add(RootList[i]);
+            }
+        }
+
+        return(RootList[s-1]);   // -1 adjusts for natural indexing
+    }
+
+    public void printTree(int s){
+        return;
+    }
+
     public boolean isTherePath(int from, int to){
         VertexInfo[] searched = BFS(from - 1);
         return (searched[to - 1].pred != -1);

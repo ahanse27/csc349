@@ -94,6 +94,11 @@ public class DiGraphTest {
                 case "q":
                     System.out.println("Good bye.");
                     System.exit(0);
+                case "b":
+                    System.out.println("\nEnter a source vertex number");
+                    int source = in.nextInt();
+                    System.out.println("\nThe breadth-first-tree is the following:");
+                    test.printTree(source);
                 default:
                     System.out.println("Not a valid input!");
             }
