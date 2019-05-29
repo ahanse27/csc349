@@ -31,9 +31,11 @@ public class DiGraph {
             int v = Q.removeFirst();
             for (int u : Adj[v]){
                 searched[u].distance = searched[v].distance + 1;
+                searched[u].pred = v;
                 Q.addLast(u);
             }
         }
+        return searched;
 
     }
     public void addEdge(int from, int to){
