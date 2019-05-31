@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Mani%20Movva-Approved-brightgreen.svg)
+![](https://img.shields.io/badge/Anish%20Yakkala-Approved-brightgreen.svg) ![](https://img.shields.io/badge/Mani%20Movva-Approved-brightgreen.svg)
 
 # Assignments
 
