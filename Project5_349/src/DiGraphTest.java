@@ -19,7 +19,7 @@ public class DiGraphTest {
         String line = in.nextLine();
         while (1 == 1) {
             if (line.length() > 1){
-                code = "l";
+                code = "chicken";
             }
             switch (code){
                 case "a":
