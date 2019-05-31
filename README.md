@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/Mani%20Movva-Approved-brightgreen.svg)
+
 # Assignments
 
 - __Lab0__ : Write specific sorting algorithms and print out runtime for various array sizes
