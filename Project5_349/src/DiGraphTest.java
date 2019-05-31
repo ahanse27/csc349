@@ -1,3 +1,4 @@
+//Mani Movva (mmovva@calpoly.edu) and Anish Yakkala (ayakkala@calpoly.edu) Date: 06/05/19 Assignment: Project 5
 import java.util.Scanner;
 
 public class DiGraphTest {
