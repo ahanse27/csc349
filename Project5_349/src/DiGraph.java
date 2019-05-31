@@ -21,17 +21,46 @@ public class DiGraph {
             this.pred = pred;
         }
     }
-
-    private class TreeNode {
-        public int vertexNum;
-        public LinkedList<TreeNode> children;
-
-        private TreeNode() {
-            int vertexNum;
-            LinkedList<TreeNode> children;
+    private class TreeNode{
+        int vnum;
+        LinkedList<TreeNode> children;
+        public TreeNode(int vnum){
+            this.vnum = vnum;
+            this.children = new LinkedList<TreeNode>();
+        }
+        public void addChild(TreeNode c){
+            children.addFirst(c);
         }
     }
+    private TreeNode buildTree(int s){
+        VertexInfo[] searched = BFS(s - 1);
+        TreeNode[] treeNodes = new TreeNode[Adj.length];
+        for (int i = 0; i < Adj.length; i++){
+            treeNodes[i] = new TreeNode(i);
+        }
+        for (int i = 0; i < Adj.length; i++){
+            if (searched[i].pred != -1) {
+                int pred = searched[i].pred;
+                treeNodes[pred].addChild(treeNodes[i]);
+            }
+        }
+        return treeNodes[s-1];
+    }
+    public void printTree(int s){
+        TreeNode root = buildTree(s);
+        printTreeAux(root , 0);
+    }
 
+    private void printTreeAux(TreeNode root, int adjust){
+        String buffer = "";
+        for (int i = 0; i < adjust;i++){
+            buffer = buffer + "    ";
+        }
+        System.out.println(buffer + (root.vnum + 1));
+        for (TreeNode child : root.children){
+            printTreeAux(child, adjust + 1);
+        }
+    }
     private VertexInfo[] BFS(int s){
         VertexInfo[] searched = new VertexInfo[Adj.length];
         LinkedList<Integer> Q = new LinkedList<Integer>();
@@ -53,41 +82,6 @@ public class DiGraph {
         return searched;
     }
 
-    private TreeNode buildTree(int s){
-        VertexInfo[] searched = this.BFS(s);
-        TreeNode[] RootList = new TreeNode[searched.length];
-
-        for(int i=0; i<RootList.length; i++)
-        {
-            RootList[i] =  new TreeNode();
-            RootList[i].vertexNum = i+1;
-            RootList[i].children = new LinkedList<TreeNode>();
-        }
-
-        for(int i=0; i<searched.length; i++)
-        {
-            if(searched[i].pred != -1)
-            {
-                RootList[searched[i].pred-1].children.add(RootList[i]);
-            }
-        }
-
-        return(RootList[s-1]);   // -1 adjusts for natural indexing
-    }
-
-    public void printTree(int s){
-        TreeNode root = buildTree(s);
-        printTreeAux(root,0);
-        return;
-    }
-
-    private void printTreeAux(TreeNode root, int l){
-        System.out.println("  ".repeat(l) + root.vertexNum);
-        for(int i=0; i<root.children.size(); i++)
-        {
-            printTreeAux(root.children.get(i),l+1);
-        }
-    }
 
     public boolean isTherePath(int from, int to){
         VertexInfo[] searched = BFS(from - 1);
