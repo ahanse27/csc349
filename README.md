@@ -9,6 +9,7 @@
 - __Project2 (Part 2)__ : Strassen Algorithm and Divide and Conquer Matrix Multiplication
 - __Project3__ : Use Dynamic Programming to solve the Assembly Line Scheduling problem and another Game.
 - __Project4__ : Use Dynamic & Greedy Programming to solve Change Making Problem.
+- __Project5__ : Implement Topological Sort, Breadth First Search, and Graph Traversal.
 
 # CSC 349. Design and Analysis of Algorithms. 4 units
 
