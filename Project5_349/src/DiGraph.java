@@ -57,8 +57,8 @@ public class DiGraph {
             buffer = buffer + "    ";
         }
         System.out.println(buffer + (root.vnum + 1));
-        for (TreeNode child : root.children){
-            printTreeAux(child, adjust + 1);
+        for (int i = root.children.size() - 1; i >= 0; i--){
+            printTreeAux(root.children.get(i), adjust + 1);
         }
     }
     private VertexInfo[] BFS(int s){
