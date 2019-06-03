@@ -4,9 +4,16 @@ import java.util.Scanner;
 public class DiGraphTest {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-
-        System.out.println("How many vertices would you like?");
-        DiGraph test = new DiGraph(in.nextInt());
+        int graphSize = -1;
+        while(graphSize==-1){
+            System.out.println("How many vertices would you like?");
+            try {
+                graphSize = Integer.parseInt(in.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.print("Invalid input! Enter a number.\n");
+            }
+        }
+        DiGraph test = new DiGraph(graphSize);
 
         System.out.println("Choose one of the following operations:\n" +
                 "- add edge (enter a)\n" +
@@ -17,6 +24,7 @@ public class DiGraphTest {
                 "- Quit (enter q)");
 
         String code = in.next();
+        System.out.println(code);
         String line = in.nextLine();
         while (1 == 1) {
             if (line.length() > 1){
@@ -25,15 +33,27 @@ public class DiGraphTest {
             switch (code){
                 case "a":
                     System.out.println("\nEnter start and destination vertex");
-                    int from = Integer.parseInt(in.next());
-                    int to = Integer.parseInt(in.next());
+                    int from =0;
+                    int to =0;
+                    try {
+                        from = Integer.parseInt(in.nextLine());
+                        to = Integer.parseInt(in.nextLine());
+                    } catch (NumberFormatException e) {
+                       System.out.print("Invalid input! Choose an operation and try again.\n");
+                       break;
+                    }
                     test.addEdge(from,to);
                     System.out.println("\n(" + from + ", " + to + ")" + " is now added to the graph");
                     break;
                 case "d":
                     System.out.println("\nEnter start and destination vertex");
-                    from = in.nextInt();
-                    to = in.nextInt();
+                    try {
+                        from = Integer.parseInt(in.nextLine());
+                        to = Integer.parseInt(in.nextLine());
+                    } catch (NumberFormatException e) {
+                        System.out.print("Invalid input! Choose an operation and try again.\n");
+                        break;
+                    }
                     test.deleteEdge(from,to);
                     System.out.println("\nDeleted edge (" + from + ", " + to + ")");
                     break;
@@ -65,8 +85,13 @@ public class DiGraphTest {
                     break;
                 case "i":
                     System.out.println("\nEnter start and destination vertex");
-                    from = in.nextInt();
-                    to = in.nextInt();
+                    try {
+                        from = Integer.parseInt(in.nextLine());
+                        to = Integer.parseInt(in.nextLine());
+                    } catch (NumberFormatException e) {
+                        System.out.print("Invalid input! Choose an operation and try again.\n");
+                        break;
+                    }
                     boolean path = test.isTherePath(from,to);
                     if (path){
                         System.out.println("\nThere is a path from " +from + " to " + to + ".");
@@ -77,15 +102,25 @@ public class DiGraphTest {
                     break;
                 case "l":
                     System.out.println("\nEnter start and destination vertex");
-                    from = in.nextInt();
-                    to = in.nextInt();
+                    try {
+                        from = Integer.parseInt(in.nextLine());
+                        to = Integer.parseInt(in.nextLine());
+                    } catch (NumberFormatException e) {
+                        System.out.print("Invalid input! Choose an operation and try again.\n");
+                        break;
+                    }
                     int length = test.lengthOfPath(from,to);
                     System.out.println("\nThe path from " +from + " to " + to + " is " + length + " long.");
                     break;
                 case "s":
                     System.out.println("\nEnter start and destination vertex");
-                    from = in.nextInt();
-                    to = in.nextInt();
+                    try {
+                        from = Integer.parseInt(in.nextLine());
+                        to = Integer.parseInt(in.nextLine());
+                    } catch (NumberFormatException e) {
+                        System.out.print("Invalid input! Choose an operation and try again.\n");
+                        break;
+                    }
                     path = test.isTherePath(from,to);
                     if (path == Boolean.TRUE) {
                         System.out.println("\nThe shortest path is the following:");
@@ -97,9 +132,18 @@ public class DiGraphTest {
                     System.exit(0);
                 case "b":
                     System.out.println("\nEnter a source vertex number");
-                    int source = in.nextInt();
+                    int source = 0;
+                    try {
+                        source = Integer.parseInt(in.nextLine());
+                    } catch (NumberFormatException e) {
+                        System.out.print("Invalid input! Choose an operation and try again.\n");
+                        break;
+                    }
                     System.out.println("\nThe breadth-first-tree is the following:");
                     test.printTree(source);
+                    break;
+                case "\n":
+                    System.out.print("Invalid input! Choose an operation and try again.\n");
                     break;
                 default:
                     System.out.println("Not a valid input!");
