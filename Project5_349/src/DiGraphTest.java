@@ -25,8 +25,8 @@ public class DiGraphTest {
             switch (code){
                 case "a":
                     System.out.println("\nEnter start and destination vertex");
-                    int from = Integer.parseInt(in.next());
-                    int to = Integer.parseInt(in.next());
+                    int from = in.nextInt();
+                    int to = in.nextInt();
                     test.addEdge(from,to);
                     System.out.println("\n(" + from + ", " + to + ")" + " is now added to the graph");
                     break;
