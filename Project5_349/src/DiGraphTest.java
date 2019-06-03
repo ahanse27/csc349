@@ -14,6 +14,11 @@ public class DiGraphTest {
                 "- edge count (enter e)\n" +
                 "- vertex count (enter v)\n" +
                 "- print graph (enter p)\n" +
+                "- topological sort (enter t)\n" +
+                "- path existence (enter i)\n" +
+                "- length of path (enter l)\n" +
+                "- shortest path (enter s)\n" +
+                "- print BFS tree (enter b)\n" +
                 "- Quit (enter q)");
 
         String code = in.next();
