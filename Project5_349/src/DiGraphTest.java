@@ -87,9 +87,12 @@ public class DiGraphTest {
                     from = in.nextInt();
                     to = in.nextInt();
                     path = test.isTherePath(from,to);
-                    if (path == Boolean.TRUE) {
+                    if (path) {
                         System.out.println("\nThe shortest path is the following:");
                         test.printPath(from, to);
+                    }
+                    else{
+                        System.out.println("\nThere is not a path from " + from + " to " + to + ".");
                     }
                     break;
                 case "q":
