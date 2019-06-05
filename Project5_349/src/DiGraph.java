@@ -85,13 +85,13 @@ public class DiGraph {
 
     public boolean isTherePath(int from, int to){
         VertexInfo[] searched = BFS(from - 1);
-        return (searched[to - 1].pred != -1);
+        return (searched[to - 1].pred != -1 || from == to);
     }
 
     public int lengthOfPath(int from, int to){
         VertexInfo[] searched = BFS(from - 1);
         int u = to - 1;
-        if (searched[u].pred == -1){
+        if (searched[u].pred == -1 && from != to){
             return -1;
         }
         int counter = 0;
@@ -104,7 +104,7 @@ public class DiGraph {
 
     public void printPath(int from, int to){
         VertexInfo[] searched = BFS(from - 1);
-        if (searched[to - 1].pred == -1){
+        if (searched[to - 1].pred == -1 & from != to){
             System.out.println("There is no path");
             return;
         }

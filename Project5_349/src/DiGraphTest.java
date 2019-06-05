@@ -7,6 +7,7 @@ public class DiGraphTest {
 
         System.out.println("How many vertices would you like?");
         DiGraph test = new DiGraph(in.nextInt());
+        in.nextLine();
 
         System.out.println("Choose one of the following operations:\n" +
                 "- add edge (enter a)\n" +
@@ -21,10 +22,9 @@ public class DiGraphTest {
                 "- print BFS tree (enter b)\n" +
                 "- Quit (enter q)");
 
-        String code = in.next();
-        String line = in.nextLine();
+        String code = in.nextLine();
         while (1 == 1) {
-            if (line.length() > 1){
+            if (code.length() > 1 || code.length() == 0){
                 code = "chicken";
             }
             switch (code){
@@ -32,6 +32,7 @@ public class DiGraphTest {
                     System.out.println("\nEnter start and destination vertex");
                     int from = in.nextInt();
                     int to = in.nextInt();
+                    in.nextLine();
                     test.addEdge(from,to);
                     System.out.println("\n(" + from + ", " + to + ")" + " is now added to the graph");
                     break;
@@ -39,6 +40,7 @@ public class DiGraphTest {
                     System.out.println("\nEnter start and destination vertex");
                     from = in.nextInt();
                     to = in.nextInt();
+                    in.nextLine();
                     test.deleteEdge(from,to);
                     System.out.println("\nDeleted edge (" + from + ", " + to + ")");
                     break;
@@ -72,6 +74,7 @@ public class DiGraphTest {
                     System.out.println("\nEnter start and destination vertex");
                     from = in.nextInt();
                     to = in.nextInt();
+                    in.nextLine();
                     boolean path = test.isTherePath(from,to);
                     if (path){
                         System.out.println("\nThere is a path from " +from + " to " + to + ".");
@@ -84,6 +87,7 @@ public class DiGraphTest {
                     System.out.println("\nEnter start and destination vertex");
                     from = in.nextInt();
                     to = in.nextInt();
+                    in.nextLine();
                     int length = test.lengthOfPath(from,to);
                     System.out.println("\nThe path from " +from + " to " + to + " is " + length + " long.");
                     break;
@@ -91,6 +95,7 @@ public class DiGraphTest {
                     System.out.println("\nEnter start and destination vertex");
                     from = in.nextInt();
                     to = in.nextInt();
+                    in.nextLine();
                     path = test.isTherePath(from,to);
                     if (path) {
                         System.out.println("\nThe shortest path is the following:");
@@ -106,16 +111,14 @@ public class DiGraphTest {
                 case "b":
                     System.out.println("\nEnter a source vertex number");
                     int source = in.nextInt();
+                    in.nextLine();
                     System.out.println("\nThe breadth-first-tree is the following:");
                     test.printTree(source);
                     break;
                 default:
                     System.out.println("Not a valid input!");
             }
-            code = in.next();
-            if (in.hasNextLine()) {
-                line = in.nextLine();
-            }
+            code = in.nextLine();
         }
     }
 
